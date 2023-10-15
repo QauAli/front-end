@@ -5,6 +5,7 @@ import Validation from '../DynamicComponents/Validation';
 import '../Extraforms/Loginformstyles.css'
 // import Loginform from '../routes/Loginform';
 // import SignIn from './SignIn';
+
 function Logform() {
 
   const[values, setvalues]=useState({
@@ -17,15 +18,9 @@ function Logform() {
 const [errors, setErrors]=useState({})
 // const [isChecked, setIsChecked] = useState(true);
 const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
-
-
-
 /*============================values-entered handling=============================================*/ 
 function handlechange (e) {
-   
      setvalues({...values, [e.target.name]: e.target.value})
-    
-    
 }
 
 /*=============================submitbutton handling==============================================*/ 
@@ -56,29 +51,32 @@ function handleCancel() {
   setErrors({});
 }
 
-
  async function handleRegistration() {
-  try {
-    const response = await fetch('your_registration_api_url_here', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    });
+  
+  const registrationObj = {
+    C_FirstName: values.name,
+    C_Email_Id: values.email,
+    Password: values.password,
+  };
 
-    if (response.ok) {
-      const responseData = await response.json();
-      console.log('Registration successful:', responseData);
-      setIsLoggedIn(true);
-    } else {
-      const errorData = await response.json();
-      console.error('Registration failed:', errorData);
-      setErrors(errorData); // Set server validation errors, if any
-    }
-  } catch (error) {
-    console.error('Registration error:', error);
-  }
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(registrationObj)
+};
+
+console.log(registrationObj)
+
+const response = await fetch('http://127.0.0.1:5000/customer',requestOptions);
+const data = await response.json();
+
+if (!response.ok) {
+  console.log("User Not Registered");
+}else{
+  console.log("Registered Successfully");
+  console.log(JSON.stringify(data));
+}
+
 }
 
 
@@ -201,7 +199,7 @@ const handleCheckboxChange = () => {
                   onChange={handlechange}/>
                 {errors.password && <p>{errors.password}</p>}
 
- <button type="submit">Register</button> 
+ <button type="submit" onClick={handleRegistration}>Register</button> 
                </div>
 
 

@@ -1,0 +1,54 @@
+.aptdiv{
+
+     min-height: 10vh;  /*this will handle the height from top and bottom  */
+    display: grid;
+    place-items: center;
+}
+
+.slider{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden; 
+}
+
+
+.slide-tracker{
+    display: flex;
+    width: calc(250px* 8);
+    animation: scroll 70s linear infinite; 
+}
+
+/* ============enabled auto slider===================== */
+@keyframes scroll {
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 12));
+    }
+    
+}
+
+.slide{
+    height: 300px;
+     width: 350px; 
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.slide img{
+    width: 100%;
+    margin: 8px; /*it creates space between the images */
+    transition: transform 1s;
+}
+.slide img:hover{
+    transform: translateY(20px);
+}
+

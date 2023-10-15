@@ -1,0 +1,24 @@
+table{
+    /* margin: 40px; */
+    width: 800px;
+    height: 200px;
+    border: 2px solid rgb(111, 128, 0);
+    text-align: center;
+    margin-left: 23rem;
+  margin-top: -13rem;
+}
+th{
+    border:  1px solid rgb(111, 128, 0);
+}
+td{
+    border:  1px solid rgb(111, 128, 0);
+}
+
+.table-container {
+    float: left; /* Float the table to the left */
+    margin-right: 20px; /* Add some margin to separate the table and image */
+  }
+  
+  #image-container {
+    float: left; /* Float the image to the left */
+  }

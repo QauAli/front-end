@@ -1,0 +1,112 @@
+.reason{
+
+    gap: 1rem;
+    display: flex;
+    padding: 0 1rem;
+    background-color: var(--lightgray);
+    width: 90rem;
+    margin-left: 3rem;
+    border-radius: 22px;
+    box-shadow: 10px 10px;
+}
+
+.left-reasons
+{
+     
+    padding: 1rem;
+padding-top: 0%;
+flex: 3;
+display: flex;
+gap: 0.5rem;
+flex-direction: column;
+
+}
+.imagecar
+{
+    height: 500px;
+    width: 600px;
+}
+/* ==================right side stylings============ */
+.right-reasons
+{
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.heading1{
+    font-weight: bold;
+    gap: 5rem;
+    font-size: 1rem;
+    margin-left: -22rem;
+}
+.right-reasons .heading{
+    margin-left: -22rem;
+}
+.simple-text
+{
+    font-size: 0.95rem;
+    /* margin-right: -2rem; */
+    margin-left: -20rem;
+}
+.simple-text>span:nth-last-of-type(1){
+    margin-top: 1rem;
+}
+
+.simple-text>span:nth-last-of-type(2){
+    margin-top: 1rem;
+}
+
+.simple-text ul{
+    padding-top: 2rem;
+}
+.ul{
+    list-style-position: outside;
+}
+/* ==================compabylogos stylings========= */
+#pic1
+{
+    width: 100px;
+    height:50px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+#pic1:hover{
+    transition:  transform 2s ;
+    transform: rotate(180deg);
+
+}
+
+
+
+#bg-text{
+    background-color: var(--lightgray);
+    position: flex;
+    bottom: 20px;
+  right: 20px;
+  top: 0;
+  z-index: 0;
+    margin:10px;
+    height: 9rem;
+    border-radius: 2rem;
+ }
+ 
+
+ #bg-text p{
+    align-items: center;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+#bttn{
+    background-color: black;
+    color: white;
+    margin-top: 1rem;
+    height: 3rem;
+    width: 13rem;
+    font-size: 1rem;
+}
+#bttn:hover{
+    background-color: navy;
+}

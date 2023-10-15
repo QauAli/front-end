@@ -1,0 +1,138 @@
+.cntct{ /*this divides the page into 2 halfs left/right*/
+  display: flex;
+    gap: .5rem;
+    padding: 0 1rem;
+    padding-bottom: 4rem;
+}
+
+.Cleft
+{
+    width: 35rem;
+    padding: 50px;
+  margin: 20px;
+  height: 35rem;
+  border: 5px solid black;
+ 
+}
+.Cleft h2{
+    text-align: start;
+    font-size: 2.2rem;
+}
+
+
+
+.form-container{
+
+  margin: 2rem;
+  color: black;
+  align-items: start;
+}
+
+.form-container form{
+  padding-top: 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+margin: 0rem;  /* this property is used to maintain  the distance from the left side of the page*/
+  
+
+}
+.form-container input{
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;   /*creates spaces between the boxes */
+  border-radius: 1rem;
+  border: 1px solid black;
+
+}
+
+.form-container textarea{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .3rem;
+  border: 1px solid black;
+
+}
+
+.form-container button{
+  display: inline;
+  border-radius: 1rem;
+}
+
+
+.Cright{
+  flex: 1;
+    position: relative;
+    padding-top: 2rem;
+
+}
+.Cright h1{
+  text-decoration: underline;
+  margin-left: 14rem;}
+
+
+  .Cright h2,h3{
+    margin-top: 2rem;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin-left: 14rem;
+
+  }
+  .Cright p{
+    font-size: 1.35rem;
+    margin-left: 14rem;
+  }
+
+  .Cright img{
+    position:absolute;
+    width: 14rem ;
+    height: 14rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: -99;
+    cursor: pointer;
+    border: solid 13px;
+    margin-left: 4rem;
+
+
+  }
+  .Cright #contact{
+    width: 14rem ;
+    height: 14rem;
+    position:relative;
+    margin-left: 8rem;
+   margin-top: 16rem;
+   border: solid 13px;
+  }
+   #contact1{
+    width: 14rem ;
+    height: 14rem;
+    position:absolute;
+  margin-top: 10rem;
+margin-left: 2rem;
+border: solid 13px;}
+
+    #contact2{
+      width: 14rem ;
+      height: 14rem;
+      position:relative;
+      margin-top: -10rem;
+      margin-left: -15rem;
+      border: solid 13px;
+      
+      
+    }
+
+
+@media screen and (max-width: 850px){
+
+  .form-container{
+    margin: 4rem 2rem;
+    color: black;
+  }
+
+  .form-container form{
+    padding-top: 2rem;
+  width: 90%;}
+
+}

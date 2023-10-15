@@ -1,0 +1,157 @@
+.Aboutmain
+{display: flex;
+    gap: .5rem;
+    padding: 0 1rem;
+  padding-top: 4rem;}
+
+
+
+#leftA
+{
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;}
+
+
+    #Aspan{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    #Ap{
+    font-size: 1rem;
+    padding-top: 10px;}
+
+
+   
+
+    .Ap
+{font-size: 20px;
+text-align: start;
+margin-left: 2rem;}
+
+
+  .rightA{
+    flex: 1;
+    position: relative;}
+
+
+  .rightA>img{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -99;
+    cursor: pointer;}
+
+
+
+  #b{
+    width: 49%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+border: 5px solid black;}
+
+#c{
+  width: 100%;
+  height: 160px;
+   object-fit: cover; 
+  border-radius: 6px;
+border: 5px solid black;
+margin-top: 1rem;
+
+}
+
+
+.rightA img:hover{
+  
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: border-color 0.3s, box-shadow 0.3s;}
+
+
+
+  .rightA #b:nth-child(2){
+    position: absolute;
+    top: -10%;
+    right: 0;}
+
+
+
+  @keyframes backChange{ /*for the background images changes*/
+                   
+    0% /*Specify when the style change will happen in percent*/
+    {background-image: url('../images/Aboutimg1.jpg');}
+    20%{ background-image: url('../images/Aboutimg2.jpg');}
+    40%{background-image: url('../images/Aboutimg3.jpg');}
+    60%{ background-image: url('../images/Aboutimg4.jpg');}
+    80%{  background-image: url('../images/Aboutimg1.jpg');}
+    100%{background-image: url('../images/Aboutimg1.jpg');}
+}
+/* ===============Process stylings============== */
+.process
+{
+    text-align: justify;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 20px;  
+    column-count: 3;
+    padding-top: 10px;
+    text-align: justify;
+    text-align: center;
+    font-size: 20px;}
+
+    #Aspro{
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      gap: 0rem;
+      font-style: italic;
+      text-decoration: underline;
+  }
+  #Apro{
+    font-size: 1.25rem;
+    gap: 1rem;}
+
+
+.process h1,h2{
+    font-size: large;
+}
+.process>p{
+    font-size: 1rem;
+}
+
+
+
+@media screen  and (max-width: 850){
+  .Aboutmain
+{display: flex;
+    gap: .5rem;
+    padding: 0 2rem;}
+
+
+#leftA
+{
+    display: flex;
+    flex: 1 1;
+    flex-direction: column-reverse;}
+
+    .rightA{
+      flex: 1;
+      position: relative;
+    padding-top: 2rem;}
+
+      .process
+      {
+          text-align: justify;
+          justify-content: space-evenly;
+          gap: 1rem;
+          padding: 20px;  
+          column-count: 3;
+          padding-top: 35px;
+          text-align: justify;
+          text-align: center;
+          font-size: 20px;}
+}

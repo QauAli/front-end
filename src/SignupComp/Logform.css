@@ -1,0 +1,131 @@
+.htmlbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--lightgray);
+    transition: 1s;
+}
+.Slide{
+    background-color: var(--gray);
+}
+.Slide .container-form{
+    background-color: var(--lightgray);
+}
+
+.container-form{
+    position: relative;
+    width: 900px;
+    height: 500px;
+    background-color:var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.container-form .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;}
+
+.container-form .box h2{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;}
+
+.container-form .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;}
+
+.formBx{
+    position: absolute;
+    left: 50px;
+    width: 450px;
+    height: 645px;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+transition: 0.5s;
+overflow: hidden;}
+
+.Slide .formBx{
+    left: 400px;
+}
+
+
+.formBx .form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;}
+
+.formBx h1{
+    margin-bottom: 2rem;
+}
+.formBx .input{
+    background-color: var(--lightgray);
+    color:black;
+    border: solid;
+    width: 16rem;
+    height: 4rem;
+}
+.formBx label{
+    color: black;
+    margin-right: 14rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+   
+/* ============Signup stylings========== */
+
+.formBx .form.signupform {
+    top: 100%;
+}
+
+.Slide .formBx .signupform {
+    top: 0;
+    pointer-events: auto; /* Enable user interaction */
+}
+.formBx .forgot{
+    margin-left: 13rem;
+}
+.formBx #canclebtn{
+    margin-top: 3rem;
+    margin-left: -5rem;
+    width: 6rem;
+    height: 2rem;
+}
+.formBx button{
+    border-radius: 1px;
+    background-color: var(--darkGrey);
+    color: white;
+   width: 14rem;
+   height: 4rem;
+   margin-top: 3rem;
+
+}
+.formBx .checkbox{
+    margin-top: 1rem;}
+/*======================= Signin stylings========================= */
+.formBx .form.signinform {
+    top: 0%;
+}
+.Slide .formBx .signinform {
+    top: 100%;
+    pointer-events: auto; /* Enable user interaction */
+}

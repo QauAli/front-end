@@ -1,0 +1,90 @@
+/* ======================================imageslider-stylings==================== */
+.IS, .image-change
+{
+height: 30rem;
+    width: 60rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: backChange 50s linear infinite;
+  margin-left: 20rem;
+
+    
+}
+@keyframes backChange{ /*for the  images changes*/
+                   
+    0% /*Specify when the style change will happen in percent*/
+    {background-image: url(../images/S1.jpg);}
+    20%{ background-image: url(../images/S2.jpg);}
+    40%{background-image: url(../images/S3.jpg);}
+    60%{ background-image: url(../images/S4.jpg);}
+    80%{  background-image: url(../images/S5.jpg);}
+    100%{background-image: url(../images/S6.jpg);}
+}
+
+
+/* ===================services component stylings========================================= */
+.SS{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.move-left-to-right {
+    animation: moveText 5s linear infinite;
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+/* ======================service cards styles================================================ */
+.card-display{
+    display: grid;
+    grid-template-columns: repeat(4,0.5fr);
+    grid-template-rows: repeat(5,0.5fr);
+    padding-top: 2rem;
+    font-style: italic;
+    padding-bottom: -10rem;
+    grid-column-gap: 10px
+    
+  }
+
+.gif{
+    width:2rem;
+    height:2rem;
+    -webkit-animation: spin 1s linear infinite ;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  100%{-webkit-transform: rotate(360deg);}
+  }
+
+.gif:hover{
+    cursor: pointer;
+}
+.card-display h5{
+    color: black;
+    text-transform: uppercase;
+    font-size: medium;
+    text-decoration: underline;
+}
+.card-display p{
+    font-size: 1rem;}
+
+.card-display h5:hover{
+color: navy;
+cursor: pointer;
+}

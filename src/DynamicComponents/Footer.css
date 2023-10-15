@@ -1,0 +1,144 @@
+#footer{
+    background-color: var(--darkGrey);
+    color: white;
+    opacity: 1;
+    padding: 1rem 1rem;
+    border-top-left-radius: 120px;
+    margin-top: 4rem;
+}
+
+#top
+{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#top i{
+    color: white;
+    font-size: 2rem;
+    margin: 0 10px;
+  
+}
+
+#top i:hover{
+color: burlywood;
+transform: translate(-10px);
+}
+
+#top h1,span{
+  margin-left: 3rem ;
+}
+#bottom h2{
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  
+}
+#bottom h3{
+  margin-left: -10rem;
+  margin-top: 0rem;
+}
+
+
+#bottom
+{
+    padding: 2rem;
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#bottom div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#bottom li{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+#bottom li:hover{
+    color:burlywood
+    }
+
+#bottom div p{
+    padding-bottom: 1rem; 
+    font-size: 0.75rem;
+}
+
+.container {
+    position: relative;
+    /* height: 100vh; */
+  }
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    background: url('../images/wave.png') repeat-x;
+    background-size: 250rem 30rem;
+    animation: animate 15s linear infinite;
+  }
+  
+  @keyframes  animate {
+    0% {
+      background-position-x: 0;
+      background-position-x: -250rem;
+    }
+  }
+  
+  .wave:nth-child(1) {
+    opacity: 0.9;
+  }
+  
+  .wave:nth-child(2) {
+    opacity: 0.5;
+    animation-delay: 0.2s;
+    animation-direction: reverse;
+  }
+  
+  .wave:nth-child(3) {
+    opacity: 0.7;
+    animation-delay: 5s;
+  }
+  .wave:nth-child(4) {
+    opacity: 0.8;
+    animation-delay: 7s;
+  }
+  .wave:nth-child(5) {
+    opacity: 0.6;
+    animation-delay: 0.3s;
+  }
+
+
+
+
+
+
+
+
+
+
+/* this makes the footer responsive means adjusted according to the screen of user */
+@media screen and (max-width: 850px)
+{
+    #footer{
+        padding: 1rem 1rem;
+
+    }
+    #footer i{
+ margin: 1rem 1rem 0 0;
+    }
+    #bottom div{
+        width: 50%;
+    }
+}

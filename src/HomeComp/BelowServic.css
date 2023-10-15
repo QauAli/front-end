@@ -1,0 +1,57 @@
+.BS
+{
+    padding-top: 2rem;
+}
+.heading
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: var(--lightgray);
+    height: 3rem;
+
+}
+.img{
+    height: 423px;
+    width: 780px;
+    
+}
+.img:hover{
+    cursor: pointer;
+
+}
+.BS p{
+    font-size: 1.25rem;
+}
+
+#list
+{
+    /* font-family: 'Times New Roman', Times, serif; */
+    padding: 2rem;
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+font-weight: bold;
+
+}
+#list div{
+    display: flex;
+    flex-direction: column;}
+
+#list li{
+    text-decoration: none;
+    color: black;
+    padding-bottom: 1rem;
+     font-size: 0.75rem; }
+
+ /* .bg-strips{
+    position: initial;
+    top:4rem;
+    left: 20rem;
+    z-index: -1;
+    width: 8rem;
+   /* height: 16rem; */
+   /* float: initial;
+
+}  */ 

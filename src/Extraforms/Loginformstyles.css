@@ -1,0 +1,175 @@
+/* ====================Signup route stylings================= */
+.signup-container .left
+{
+
+    height: 465px;
+    position:absolute; 
+    width: 27rem; 
+    margin-top:15rem;
+    top: 1rem;
+    left: 0;
+    bottom: 0;
+    background-color: var( --lightgray);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+.left-triangle{
+    width: 205px;
+    background-color: var(--lightgray);
+}
+.left-triangle{
+    width: 305px;
+}
+.left-triangle{
+    width: 505px;
+}
+
+.pic1{
+    position: absolute; 
+   top: 7rem;
+   right: 0rem;
+   width: 30rem;
+   height: 27rem;
+   margin-right: 35rem;
+   /* padding-top: 5rem;} */}
+/* ===================loginform styles================== */
+.wrap{
+
+
+    display: flex;
+    justify-content: center;
+   outline:  none !important;
+   align-items: center;
+   height: 50rem;
+   margin: 5px;
+   margin-left: 5rem;
+   margin-top: -2rem;
+
+  
+   
+   /* background-image: url("../images/img5.jpg"); */
+   /* background-position: relative;
+background-repeat: no-repeat;
+background-size: cover; */
+/* background-position-x: center;
+background-position-y: center; */
+background-position: -1rem;
+
+
+}
+
+.form1{
+    width: 50%;
+    /* border: 3px solid transparent; */
+    border: 3px;
+    border-radius: 12px;
+    overflow: hidden;
+   box-shadow: 0 15px 20px black;
+
+    /* backdrop-filter: blur(20px); */
+    /* background-color: var(--signupCard); */
+    /* margin-left: 30rem; */
+   
+
+
+}
+
+.Label1
+/* {color: white; */
+   { width: 100%;
+    padding: 1px 20px;
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+    float: left;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    align-items: start;
+    font-style: italic;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+.form1 button
+{
+    background-color: navy;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+}
+.form1 button:hover{
+    opacity: 0.8;
+}
+
+#canclebtn{
+    width: 5rem;
+    border-radius: 1px;
+background-color: red;
+align-items: left;
+margin-left: -0rem;
+margin-right: 12rem;
+text-decoration: none;
+
+}
+
+.form-container{
+    padding: 1px;
+}
+span .psw{
+    /* float: right; */
+    padding-top: 11px;
+    text-align: right;
+    text-decoration: none;
+    margin-left: 18rem;
+}
+
+#logout{
+   
+    
+   margin-left: 40rem;
+   
+
+}
+
+#logout:hover{
+    background-color: black;
+    color: white;
+}
+/* Add this CSS to your stylesheet */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+
+ /* ===================================signup page styling===================================== */
+ .signup-container {
+    position: relative;
+  }
+
+ /* ============================login 2 stying====================== */
+ 
+
+
+
+ @media screen and(max-width:850px)
+{
+    span.psw{
+        display: block;
+        float: none;
+    }
+    .canclebtn{
+        width: 100%;
+    }
+}

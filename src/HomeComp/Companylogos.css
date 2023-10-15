@@ -1,0 +1,49 @@
+.rotation{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) rotateZ(-10deg);
+}
+.rotation>img{
+    width: 320px;
+    height: 200px;
+    position: absolute;
+}
+
+#logos{
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+    from{}
+    to{
+        transform: rotateZ(360deg);
+    }
+    
+}
+
+#logos img:nth-child(1){
+    transform: rotateY(60deg) translateZ(300px);
+}
+#logos img:nth-child(2){
+    transform: rotateY(120deg) translateZ(300px);
+}
+#logos img:nth-child(3){
+    transform: rotateY(180deg) translateZ(300px);
+}
+#logos img:nth-child(4){
+    transform: rotateY(240deg) translateZ(300px);
+}
+#logos img:nth-child(5){
+    transform: rotateY(300deg) translateZ(300px);
+}
+#logos img:nth-child(6){
+    transform: rotateY(360deg) translateZ(300px);
+}
+#logos img:nth-child(7){
+    transform: rotateY(420deg) translateZ(300px);
+}
+#logos img:nth-child(8){
+    transform: rotateY(480deg) translateZ(300px);
+}

@@ -1,0 +1,15 @@
+.header{
+display: flex;
+justify-content: space-between;
+height:20px;
+
+}
+
+
+.Logo{
+    width: 7rem ;
+    height: 7rem;
+    position:absolute;
+    left:0; /*this proprty will fix the logo to the left corner */
+    top:0;  
+}

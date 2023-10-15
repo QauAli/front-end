@@ -1,0 +1,117 @@
+
+.Appleft h3{
+  text-decoration: underline;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  margin-top: 1rem;
+  font-size: 2rem;
+
+}
+
+/* =================FormAppoitment stylings================================ */
+.mainbody
+{
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65rem;
+  height: 110vh;
+  margin-bottom: 4rem;
+margin-top: -5rem;
+}
+.mainbody .rightside{
+  position: absolute;
+  height: 38rem;
+  width: 42rem;
+  margin-left: 100rem;
+  margin-top: 13rem;
+}
+
+
+
+#body{
+  max-width: 880px;
+  padding: 28px;
+  margin: 0 28px;
+  box-shadow: 0 15px 20px black;
+
+  /* background-image: url('../images/audi1.jpg'); */
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+
+}
+.form2{
+      margin: 5px;
+    padding: 10px;
+    display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+
+}
+.form2 textarea{
+
+  border-radius: .3rem;
+  border: 1px solid black;
+  width: 27rem;
+  margin-top: 1rem;
+
+}
+
+
+.content input{
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;   /*creates spaces between the boxes */
+  border-radius: 1rem;
+  border: 1px solid black;
+  
+}
+
+.contact{
+  margin-left: 1rem;
+}
+.content button{
+  margin-top: 5rem;
+
+}
+.content button:hover{
+ cursor: pointer;
+ background-color: navy;
+ color: white;
+
+}
+
+.city{
+  margin-left: 13rem;
+  width: 30rem;
+  margin-top: 0rem;
+}
+
+  
+
+
+@keyframes move {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+.strips{
+  position: absolute;
+  top: 4rem;
+  right: 8rem;
+  z-index: -1;
+  /* width: 10rem; */
+  height: 30rem;
+
+}

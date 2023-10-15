@@ -1,0 +1,107 @@
+.hero{
+    width: 100%;
+    height: 99vh;
+    position: relative;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero_text
+{
+    width: 100%;
+    position: absolute;
+  top: 40%;
+  left:30%;
+  transform: translate(-50%, -50%);
+}
+
+.hero_text h1
+{
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+  /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  */
+}
+.hero_text p{
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.5rem 0 2rem 0;
+}
+
+.hero_text .show{
+    text-decoration: none;
+    background-color: black;
+    padding: 0rem 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+.hero_text a #btn2 :hover{
+background-color: brown;
+
+}
+
+ /*-------------------------------About Component changings--------------------------------------- */
+.hero-about{
+    width: 100%;
+    height: 90vh;
+    position: relative;}
+
+.hero-about h1{
+/* important is added because this property is overwrite */
+color: white !important; 
+text-align: right;
+}
+
+/*------------------------- Services component changings -------------------------------------*/
+
+.hero-Services{
+    width: 100%;
+    height: 80vh;
+    position: relative;}
+
+/* -------------------this style is for Appointments----------------- */
+    .hero-Appointment{
+        width: 100%;
+        height: 90vh;
+        position: relative;}
+        .hero-Appointment h1{
+            color: white !important; }
+
+/*----------------------------- this is for contact component ----------------------------*/
+
+.hero-Contact{
+    width: 100%;
+    height: 90vh;
+    position: relative;}
+    
+    .hero-Contact h1{
+        color: white !important; }
+
+
+
+    /*------------------------- make the components responsive--------------------------- */
+
+
+@media screen and(max-width:555px)
+{
+    .hero_text h1{
+        padding: 10px 20px;
+    }
+    .hero_text p{
+        font-size: x-small;
+         padding: 0.5rem 0 2rem 0; 
+    }
+    .hero_text .show{
+    
+        padding: .6rem 1.1rem;
+        border-radius: 12px;
+        font-size: 1rem;
+        
+    }
+}

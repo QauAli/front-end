@@ -1,0 +1,74 @@
+.dash-header {
+    height: 70px;
+    width: 100vw;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+
+.logosec{
+    height: 6rem;
+}
+.name{
+    text-align: left;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    font-size: 27px;
+  font-weight: 600;
+
+}
+
+.admin_Logo{
+    width: 6rem ;
+    height: 6rem;
+    position:absolute;
+    left:0; /*this proprty will fix the logo to the left corner */
+    top:0rem;  
+    margin-left: 1rem;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  margin-left: 40rem;
+}
+
+
+
+  .searchbar input {
+    width: 350px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: var(--darkGrey);
+    padding: 0 20px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+  }
+  /* .searchbtn {
+    width: 50px;
+    height: 42px;
+    border-radius: 12px;
+  }  */     
+
+  .message {
+    gap: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+  .circle {
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    background-color: #fa7bb4;
+    border-radius: 50%;
+    left: 19px;
+    top: 8px;
+  }

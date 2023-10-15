@@ -41,25 +41,12 @@ function App() {
           <Route path="/Forgotpassword" element={<ForgotPassword/>}/>
           
           {/* <Route path="/Dashboard" element={<Dashboard/>}/> */}
-            <Route path="/StaffDetails" element={<Box/>}/>  
-             {/* <Admin/>  */}
-
-          {/* <Dashboard/>  */}
-          
-           </Routes> 
+          <Route path="/StaffDetails" element={<Box/>}/>  
+          </Routes> 
            
          }
-
-
            {/* <Box/> */}
-        
-        {/* <Dashboard/> */}
           </div>
-      
-      
-
-
-
 </div>
   );
 }

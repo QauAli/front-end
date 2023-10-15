@@ -6,7 +6,7 @@ function Box() {
     const [staffMembers, setStaffMembers] = useState([]);
 
     useEffect(() => {
-       fetch('http://127.0.0.1:5000/Staff')
+       fetch('http://127.0.0.1:5000/staff')
           .then((res) => res.json())
           .then((data) => {
              console.log(data);
@@ -34,7 +34,7 @@ function Box() {
               marginBlock: 10,
             }}
           >
-            <p style={{ fontSize: 20, color: 'white' }}>{dataObj.des}</p>
+            <p style={{ fontSize: 20, color: 'white' }}>{dataObj.Staff_Name}</p>
           </div>
         );
       })}

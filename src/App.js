@@ -17,7 +17,7 @@ import Signup from "./SignupComp/Signup";
 import ForgotPassword from "./SignupComp/Forgotpassword";
 import Dashboard from "./AdminDashboard/Dashboard";
 // import Admin from './Admin/Admin'
-//import Box from"./Components/Box"
+import Box from"./DynamicComponents/Box"
 
 function App() {
   
@@ -41,7 +41,7 @@ function App() {
           <Route path="/Forgotpassword" element={<ForgotPassword/>}/>
           
           {/* <Route path="/Dashboard" element={<Dashboard/>}/> */}
-           {/* <Route path="/StaffDetails" element={<Box/>}/>  */}
+            <Route path="/StaffDetails" element={<Box/>}/>  
              {/* <Admin/>  */}
 
           {/* <Dashboard/>  */}

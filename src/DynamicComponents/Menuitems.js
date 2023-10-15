@@ -7,12 +7,12 @@ export const Menuitems=[
     cName: "nav-links",
     icons:"fa-solid fa-house"
 },
-// {
-//     title:'Staff-Details',
-//     url: '/StaffDetails',
-//     cName: "nav-links",
-//     icons: "fa-solid fa-house"
-// },
+ {
+    title:'Staff-Details',
+     url: '/StaffDetails',
+     cName: "nav-links",
+     icons: "fa-solid fa-house"
+},
 {
     title:'About',
     url: '/About',

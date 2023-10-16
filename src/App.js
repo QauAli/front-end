@@ -17,7 +17,7 @@ import Signup from "./SignupComp/Signup";
 import ForgotPassword from "./SignupComp/Forgotpassword";
 import Dashboard from "./AdminDashboard/Dashboard";
 // import Admin from './Admin/Admin'
-import Box from"./DynamicComponents/Box"
+import Box from "./components/Box/Box";
 
 function App() {
   

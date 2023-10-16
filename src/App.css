@@ -21,7 +21,7 @@
 /* edit the app.js file  */
 .App {
   mix-blend-mode: overlay;
-   background-color: var(--gray); 
+  background-color: var(--gray); 
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -65,3 +65,6 @@
   }
   
 } */
+
+
+

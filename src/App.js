@@ -43,29 +43,11 @@ function App() {
           <Route  path="/Signup" element={<Signup/>}/> 
           <Route path="/Forgotpassword" element={<ForgotPassword/>}/>
           
-          <Route path="/Dashboard" element={<Dashboard/>}/>
-            <Route path="/StaffDetails" element={<Box/>}/>  
             <Route path="/Logout" element={<Logout/>}/>  
-
-
-             {/* <Admin/>  */}
-
-          {/* <Dashboard/>  */}
-          
-           </Routes> 
            
          }
-
-
            {/* <Box/> */}
-        
-        {/* <Dashboard/> */}
           </div>
-      
-      
-
-
-
 </div>
   );
 }

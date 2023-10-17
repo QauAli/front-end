@@ -18,6 +18,9 @@ import ForgotPassword from "./SignupComp/Forgotpassword";
 import Dashboard from "./AdminDashboard/Dashboard";
 // import Admin from './Admin/Admin'
 import Box from "./components/Box/Box";
+import Logout from "./components/Logout/Logout";
+
+
 
 function App() {
   
@@ -40,8 +43,11 @@ function App() {
           <Route  path="/Signup" element={<Signup/>}/> 
           <Route path="/Forgotpassword" element={<ForgotPassword/>}/>
           
-          {/* <Route path="/Dashboard" element={<Dashboard/>}/> */}
+          <Route path="/Dashboard" element={<Dashboard/>}/>
             <Route path="/StaffDetails" element={<Box/>}/>  
+            <Route path="/Logout" element={<Logout/>}/>  
+
+
              {/* <Admin/>  */}
 
           {/* <Dashboard/>  */}

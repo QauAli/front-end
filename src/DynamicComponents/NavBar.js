@@ -39,22 +39,12 @@ class NavBar extends Component{
 
 {Menuitems.map((item,index)=>{
   return(
-   
-
-   
     // dynamically assign the navbar items names by using the navabaritems component
     <li key={index} >
       <Link to={item.url} className={item.cName} >
-
     <i className={item.icons} ></i>{item.title}
-   
-    
    </Link> 
- 
    </li>
-    
-   
-
   );
 }) }
  <Link to="/Signup">

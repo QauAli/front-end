@@ -40,6 +40,12 @@ export const Menuitems=[
     icons:"fa-solid fa-address-book"
 },
 {
+    title:'Logout',
+    url: '/Logout',
+    cName: "nav-links",
+    icons:"fa-solid fa-address-book"
+},
+{
     title:'Sign-up',
     url: '/Signup',
     // cName: "nav-links",

@@ -5,7 +5,7 @@ import './Herostyles.css'
 function Hero(props) {
   return (
     <>
-    {/* hero component is dynamic accoridin to the web pages switched it change */}
+    {/* hero component is dynamic according to the web pages switched it change */}
 {/* we can control this from different web pages */}
     <div className={props.cName}>
         <img alt='heroImg'  src={props.heroImg}/>

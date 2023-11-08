@@ -19,6 +19,10 @@ import Dashboard from "./AdminDashboard/Dashboard";
 // import Admin from './Admin/Admin'
 import Box from "./components/Box/Box";
 import Logout from "./components/Logout/Logout";
+import Profile from "./DynamicComponents/Profile";
+import Customerdash from "./CustomerDashboard/Customerdash";
+import Admindash from "./AdminDashboard/Admindash";
+import Employeedash from "./EmployeeDashboard/Employeedash";
 
 
 
@@ -42,13 +46,23 @@ function App() {
           <Route  path="/Contact" element={<Contact/>}/>
           <Route  path="/Signup" element={<Signup/>}/> 
           <Route path="/Forgotpassword" element={<ForgotPassword/>}/>
-          
-            <Route path="/Logout" element={<Logout/>}/>  
-           
+          <Route path="/Logout" element={<Logout/>}/> 
+          <Route  path="/Profile" element={<Profile/>}/>
+          <Route  path="/Admindash" element={<Admindash/>}/>
+          <Route  path="/Dashboard" element={<Dashboard/>}/>
+          <Route  path="/Customerdash" element={<Customerdash/>}/>
+          <Route  path="/Employeedash" element={<Employeedash/>}/>
+  
+         
+            
+          </Routes>
          }
-           {/* <Box/> */}
-          </div>
+         </div>
+
+        
+          
 </div>
+        
   );
-}
+        }
 export default App;

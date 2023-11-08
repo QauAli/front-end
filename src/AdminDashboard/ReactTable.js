@@ -1,157 +1,104 @@
-import React from "react";
-import './ReactTable.css';
-import Admin from "../images/Admin.png"
-function ReactTable() {
-    const data = [
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Empolyees",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Appointments",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Bills",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Services",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        },
-        {
-            fname: "Customers",
-            lname: "Link",
-            buttons: [
-                { label: "Add", action: () => console.log("Add clicked") },
-                { label: "Update", action: () => console.log("Update clicked") },
-                { label: "view", action: () => console.log("view clicked") },
-                { label: "delete", action: () => console.log("delete clicked") }
-            ]
-        }
-    ];
+import React, { useState } from "react";
+import "./ReactTable.css";
+import Addform from "./Addform";
+import Viewform from "./Viewform";
 
-    return (
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Operations</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((val, i) => (
-                        <tr key={i}>
-                            <td>{val.fname}</td>
-                            <td>
-                                {val.buttons.map((button, j) => (
-                                    <button key={j} onClick={button.action}>{button.label}</button>
-                                ))}
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <div className="image-container">
-                <img className= 'Admin-img' id= 'image-container'src={Admin} alt="Your Image" />
-            </div>
+function ReactTable() {
+  const data = [
+    { fname: "Customers" },
+    { fname: "Empolyees" },
+    { fname: "Appointments" },
+    { fname: "Bills" },
+    { fname: "Services" },
+  ];
+
+  const [showAddform, setShowAddform] = useState(false);
+  const [showUpdateform, setShowUpdateform] = useState(false);
+  const [showViewform, setShowViewform] = useState(false);
+  const [showDeleteform, setShowDeleteform] = useState(false);
+
+
+  return (
+    <div className="react-table">
+     
+      <table>
+      <h4 id="operations">Operations</h4>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((val, i) => (
+            <tr key={i}>
+              <td>{val.fname}</td>
+              <td>
+                <button
+                  className="table-button"
+                  onClick={() => setShowAddform(true)}
+                >
+                  Add
+                </button>
+                <button
+                  className="table-button"
+                  onClick={() => setShowUpdateform(true)}
+                >
+                  Update
+                </button>
+                <button
+                  className="table-button"
+                  onClick={() => setShowViewform(true)}
+                >
+                  View
+                </button>
+                <button
+                  className="table-button"
+                  onClick={() => setShowDeleteform(true)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {showAddform && (
+        <div className="popup-form">
+          <Addform />
+          <span className="close-icon" onClick={() => setShowAddform(false)}>x</span>
+           <button type='submit' className="Addbutton">Add</button>
         </div>
-    );
+      )}
+
+      {showUpdateform && (
+        <div className="popup-form">
+          <Addform /> 
+          {/* beacuse add form contains the same fileds as i used in add form */}
+          <span className="close-icon" onClick={() => setShowUpdateform(false)}>x</span>
+          <button type='submit' className="Addbutton">Update</button>
+        </div>
+      )}
+
+      {showViewform && (
+        <div className="popup-form">
+          <Viewform />
+          <span className="close" onClick={() => setShowViewform(false)}>x</span>
+          <button type='submit' className="Addbutton">View</button>
+        </div>
+      )}
+
+      {showDeleteform && (
+        <div className="popup-form">
+          {/* because delete form uses the same fields as view form uses so that's why i cannot make another form for delete */}
+          <Viewform />
+          <span className="close" onClick={() => setShowDeleteform(false)}>x</span>
+          <button type='submit' className="Addbutton">Delete</button>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default ReactTable;

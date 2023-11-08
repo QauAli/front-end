@@ -18,6 +18,41 @@ function FormAppoitment() {
       //const [submittedData, setSubmittedData] = useState(null);
       const [errors, setErrors]=useState({})
 
+
+      async function handleMessage() {
+  
+        const messageObj = {
+          Name: values.name,
+          C_Email_Id: values.email,
+          Appointment_Date: values.appointmentDate,
+          Appointment_Time: values.appointmentTime,
+          Car_Model_Make: values.carModelMake,
+          ContactNo: values.contactInfo,
+          City: values.city,
+          Description: values.description
+
+        };
+      
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(messageObj)
+      };
+      
+      console.log(messageObj)
+      
+      const response = await fetch('http://127.0.0.1:5000/appointment',requestOptions);
+      const data = await response.json();
+      
+      if (!response.ok) {
+        console.log("Appointment Not Registered");
+      }else{
+        console.log("Appointment Registered Successfully");
+        console.log(JSON.stringify(data));
+      }
+      
+      }
+
       /*============================values-entered handling=============================================*/ 
 function handlechange (e) {
    
@@ -66,10 +101,10 @@ function handlesubmit(e) {
 
 
                 <label>Appoitment Date
-                <input type="date"  name="appoitmentDate"  value={values.appointmentDate} onChange={handlechange}/>
+                <input type="date"  name="appointmentDate"  value={values.appointmentDate} onChange={handlechange}/>
                 </label>
                 <label>Appoitment Time
-                <input type="time"  name="appoitmentTime"  value={values.appoitmentTime} onChange={handlechange}/>
+                <input type="time"  name="appointmentTime"  value={values.appointmentTime} onChange={handlechange}/>
                 </label>
     
 
@@ -93,7 +128,7 @@ function handlesubmit(e) {
         onChange={handlechange}>
         </textarea>
 
-        <button type='submit' >Send Message</button>
+        <button type='submit'onClick={handleMessage}> Send Message</button>
                     
         
 

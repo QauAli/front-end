@@ -1,13 +1,13 @@
 #sidebar {
     grid-area: sidebar;
     height: 100%;
-    background-color: #656565;
+    background-color: white;
     overflow-y: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     width: 20rem;
-    margin-top: 0rem;
-    height: 35rem;
+    margin-top: -4rem;
+    height: 45rem;
   }
   
   .sidebar-title {

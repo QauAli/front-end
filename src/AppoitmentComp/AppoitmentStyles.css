@@ -1,3 +1,6 @@
+.hero-Appointment{
+  height: 27rem;
+}
 
 .Appleft h3{
   text-decoration: underline;
@@ -19,7 +22,7 @@
   width: 65rem;
   height: 110vh;
   margin-bottom: 4rem;
-margin-top: -5rem;
+margin-top: -1rem;
 }
 .mainbody .rightside{
   position: absolute;
@@ -103,15 +106,4 @@ margin-top: -5rem;
   100% {
     top: 0;
   }
-}
-
-
-.strips{
-  position: absolute;
-  top: 4rem;
-  right: 8rem;
-  z-index: -1;
-  /* width: 10rem; */
-  height: 30rem;
-
 }

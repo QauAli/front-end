@@ -1,33 +1,16 @@
-import { useState } from 'react'
-import './Dashboard.css'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Home from './Home'
-import Columns from './Columns'
-import ReactTable from './ReactTable'
-import Admin from "../images/Admin.png"
-
+import "./Dashboard.css";
+import Home from "./Home";
+import BarChart from "./BarChart";
+import Piechart from "./Piechart";
 
 function Dashboard() {
-    const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
-    const OpenSidebar = () => {
-      setOpenSidebarToggle(!openSidebarToggle)
-    }
-  
-    return (
-      <div className='Dashboard-grid-container'>
-        
-        <Header OpenSidebar={OpenSidebar}/>
-        
-        <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-        {/* <img className="Admin-img" src={Admin} alt=''/> */}
-        <Home />
-        <ReactTable/>
-        {/* <Columns/> */}
-        
-      </div>
-    )
-  }
-export default Dashboard
-
+  return (
+    <div className="Dashboard-grid-container">
+      <Home/>
+      <BarChart />
+      <Piechart />
+    </div>
+  );
+}
+export default Dashboard;

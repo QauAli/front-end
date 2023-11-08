@@ -7,12 +7,12 @@ export const Menuitems=[
     cName: "nav-links",
     icons:"fa-solid fa-house"
 },
- {
-    title:'Staff-Details',
-     url: '/StaffDetails',
-     cName: "nav-links",
-     icons: "fa-solid fa-house"
-},
+//  {
+//     title:'Staff-Details',
+//      url: '/StaffDetails',
+//      cName: "nav-links",
+//      icons: "fa-solid fa-house"
+// },
 {
     title:'About',
     url: '/About',
@@ -45,21 +45,14 @@ export const Menuitems=[
     cName: "nav-links",
     icons:"fa-solid fa-address-book"
 },
-{
-    title:'Sign-up',
-    url: '/Signup',
-    // cName: "nav-links",
-    // icons:"fa-solid fa-user-plus"
-    cName: "nav-links-mobile",
-    icons: "fa-solid fa-address-book"
-},
+
+
 // {
-//     title:'Dashboard',
-//     url: '/Dashboard',
+//     title:'Sign-up',
+//     url: '/Signup',
 //     cName: "nav-links-mobile",
 //     icons: "fa-solid fa-address-book"
 // },
-
 
 
 ]

@@ -1,0 +1,39 @@
+/*--------------------addform stylings------------------- */
+.addform{margin: 2rem;}
+  .addform form{
+    margin-left: 23rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: white;
+    border: solid black;}
+
+.addform input{
+    width: 25rem;
+    margin-left: 6rem;
+    border: solid black;}
+
+.addform input::placeholder {
+    color: black
+  }
+  
+
+.addform textarea{
+    width: 25rem;
+    margin-top: 1rem;
+    margin-left: 6rem;
+    border: solid black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+     }
+    .addform textarea::placeholder {
+        color: black;
+      }
+
+.addform button{
+    width: 15rem;
+    border-radius: 1px;
+    margin-left: 12rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: gray;}

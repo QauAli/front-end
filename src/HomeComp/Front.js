@@ -1,12 +1,9 @@
 import React from 'react'
 import './Front.css'
-// import Header from './Header'
-//import NavBar from './NavBar'
-//import picf from '../images/picf.png'
 import Numbercounter from 'number-counter' //this is package install
 import background from '../images/background.png'
-//import strips from '../images/strips.png'
 import {motion} from 'framer-motion' //this library is used for adding motion in 
+import { Link } from 'react-router-dom'
 const Front = () => {
   const transition = {type: 'spring', duration: 3} //this handles the transition in the best mechanics div
   return (
@@ -18,9 +15,6 @@ const Front = () => {
        </div>
         <div className='left'>
           <div className='color'>
-        {/* <Header/> 
-        <NavBar/>
-        */}
 
         </div>
 
@@ -51,11 +45,6 @@ const Front = () => {
 <div className='rev1'>RIDE TODAY
   </div>
 
-      
-    {/* <div className='small-text'>
-<span>Welcome to Motor-Menders 
-  Online Car Repair Center </span>
-       </div> */}
 
     </div> {/*font text div closure */}
 
@@ -82,7 +71,10 @@ const Front = () => {
 
     {/* front buttons */}
     <div className="button">
+
+      <Link to='/Appointment'>
       <button id="btn">GET AN APPOINTMENT</button>
+      </Link>
     </div>
     </div> {/* this is left div closure  */}
 
@@ -98,13 +90,10 @@ const Front = () => {
         <div className='right-triangle'></div>
         <div className='right-triangle1'></div>
         <div className='right-triangle2'></div>
-        {/* < img src={background} alt="" className='pic'/> */}
-        {/* <span>Service Hours:Monday-Sunday(11AM-10PM)</span> */}
        
         
         </div>
         <img src={background} alt="" className='pic'/>
-        {/* <img src={strips} alt='' className="bg-strips"></img> */}
            </div> 
          )
     

@@ -1,17 +1,23 @@
+.react-table h4{
+  margin-top: -5rem;
+  font-size: 2rem;
+}
+
 table{
     /* margin: 40px; */
     width: 800px;
     height: 200px;
-    border: 2px solid rgb(111, 128, 0);
+    border: 2px solid;
     text-align: center;
     margin-left: 23rem;
-  margin-top: -13rem;
+  margin-top: -55rem;
+  margin-bottom: 13rem;
 }
 th{
-    border:  1px solid rgb(111, 128, 0);
+    border:  1px solid;
 }
 td{
-    border:  1px solid rgb(111, 128, 0);
+    border:  1px solid;
 }
 
 .table-container {
@@ -21,4 +27,73 @@ td{
   
   #image-container {
     float: left; /* Float the image to the left */
+  }
+
+  .react-table{
+    margin-top: 22rem;
+  }
+
+  .table-button{
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+  .table-button:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .popup-form {
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;}
+
+  .popup-form button:hover{
+    background-color: black;
+      color: white;}
+
+  .react-table .close-icon{
+    content: 'x';
+  cursor: pointer;
+  position: fixed;
+  margin-left: 36rem;
+  margin-top: -27rem;
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 20px;
+  }
+
+
+  .Addbutton{
+    border-radius: 1px;
+    width: 36.5rem;
+    margin-top: -4rem;
+    margin-right: 8.5rem;
+    border: solid black;
+
+  }
+
+  .react-table .close{
+    content: 'x';
+  cursor: pointer;
+  position: fixed;
+  margin-left: 36rem;
+  margin-top: -13rem;
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 20px;
   }

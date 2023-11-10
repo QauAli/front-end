@@ -1,12 +1,21 @@
 import React from "react";
 import '../AdminDashboard/Sidebar.css'
-import { Link } from "react-router-dom";
-// this link is used for redirecting to the sepcific section of the same page when click on linked tag
+import arrays from "../variables/globals";
+import {useNavigate } from "react-router-dom";
 import {
   BsPersonCircle,
 } from "react-icons/bs";
 
 function E_Sidebar({ openSidebarToggle, OpenSidebar }) {
+  const navigate = useNavigate();
+
+  function clearData() {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
+      arrays.user = [];
+      navigate("/");
+    }
+  }
     
   return (
     <aside
@@ -25,10 +34,8 @@ function E_Sidebar({ openSidebarToggle, OpenSidebar }) {
         <li className="sidebar-list-item">
             <BsPersonCircle className="icon" /> Profile
         </li>
-        <li className="sidebar-list-item">
-          <Link to="/Logout">
-          <i class="fa-solid fa-right-from-bracket"></i>Logout
-          </Link>
+        <li className="sidebar-list-item" onClick={clearData}>
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
         </li>
       </ul>
     </aside>

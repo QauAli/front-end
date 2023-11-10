@@ -1,0 +1,41 @@
+
+
+GET http://127.0.0.1:5000/customer
+
+###
+
+GET http://127.0.0.1:5000/appointment
+
+
+###
+
+GET http://127.0.0.1:5000/getAppointments
+
+
+###
+
+GET http://127.0.0.1:5000/staff
+
+
+
+
+###
+POST http://127.0.0.1:5000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "asnadali123@gmail.com",
+    "password": "456ty",
+    "role": "admin"
+}
+
+###
+POST http://127.0.0.1:5000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "nimra12@gmail.com",
+    "password": "n23rmt",
+    "role": "customer"
+}
+

@@ -8,11 +8,29 @@ function LoginMember() {
   const [role, setRole] = useState("admin");
   const navigate = useNavigate();
 
-
   function handleUser(data) {
+
     arrays.user.push(data);
-    navigate("/");
+    switch (data.role) {
+      case 'admin':
+        console.log("Navigating to Admindashboard");
+        navigate("/Admindash");
+        break;
+      case 'customer':
+        console.log("Navigating to Customerdashboard");
+        navigate("/Customerdash");
+        break;
+      case 'staff':
+        console.log("Navigating to Employeedashboard");
+        navigate("/Employeedash");
+        break;
+      default:
+        console.log("Role not recognized. Navigating to home page");
+        navigate("/");// refer to home page if role is not recognized
+        break;
+    }
   }
+  
 
   function handleRole(e) {
     setRole(e.target.value);
@@ -20,10 +38,9 @@ function LoginMember() {
 
   useEffect(() => {
     console.log("useEffect Working");
-    if (arrays.user.length != 0) {
-      navigate("/");
-    }
-  }, []);
+  },);
+  
+    
 
   const [values, setvalues] = useState({
     email: "",
@@ -37,12 +54,13 @@ function LoginMember() {
     setvalues({ email: "", password: "" });
   }
 
-  function handlesubmit(e) {
+  async function handlesubmit(e) {
     e.preventDefault();
-
+  
     console.log("handle Submit called");
-    handleRegistration();
+    await handleRegistration();
   }
+  
   async function handleRegistration() {
     const registrationObj = {
       email: values.email,
@@ -50,7 +68,7 @@ function LoginMember() {
       role: role,
     };
 
-    console.log(registrationObj);
+    console.log("registration object",registrationObj);
 
     const requestOptions = {
       method: "POST",
@@ -64,19 +82,14 @@ function LoginMember() {
     if (!response.ok) {
       console.log("Email OR Password Incorrect");
     } else {
-      console.log("Login Successfully");
-      // console.log(JSON.stringify(data));
-      console.log(data);
-
-      if (data == null) {
-        arrays.user = [];
-      } else {
-        handleUser(JSON.stringify(data));
-      }
+      // console.log("Login Successfully");
+      //console.log("handle registration login role",data.role);
+      handleUser(data);
     }
   }
 
   return (
+    <div>
     <form className="form signinform" onSubmit={handlesubmit}>
       <h1>
         <i class="fa-solid fa-user-plus"></i>Sign in
@@ -118,6 +131,7 @@ function LoginMember() {
         Forgot<Link to="/Forgotpassword">Password?</Link>
       </span>
     </form>
+    </div>
   );
 }
 

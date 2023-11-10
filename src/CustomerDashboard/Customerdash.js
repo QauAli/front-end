@@ -5,7 +5,6 @@ import '../AdminDashboard/Sidebar.css'
 import C_Sidebar from './C_Sidebar';
 import Profile from '../DynamicComponents/Profile';
 import {BsPersonCircle,BsJustify,BsSearch,BsFillBellFill,BsFillEnvelopeFill} from 'react-icons/bs'
-import { Link } from 'react-router-dom';
 function Customerdash() {
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 

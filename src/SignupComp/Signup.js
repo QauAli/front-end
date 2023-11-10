@@ -1,5 +1,5 @@
 import React from 'react'
-import Htmlform from './Logform'
+import Logform from './Logform'
 import LoginMember from '../components/LoginMember/LoginMember'
 
 const Signup = () => {
@@ -9,7 +9,7 @@ const Signup = () => {
 
 
 
-     <Htmlform/> 
+     <Logform/> 
       
    {/* <Loginform/> */}
 

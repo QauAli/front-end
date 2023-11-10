@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import './AppoitmentStyles.css'
 import Validation from '../DynamicComponents/Validation';
-import bghome from '../images/bghome.jpg'
 import right from "../images/right.png"
 
 function FormAppoitment() {
@@ -17,7 +16,6 @@ function FormAppoitment() {
       });
       //const [submittedData, setSubmittedData] = useState(null);
       const [errors, setErrors]=useState({})
-
 
       async function handleMessage() {
   

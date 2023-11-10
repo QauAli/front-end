@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css'
 import '../DynamicComponents/Profile'
-import { Link } from 'react-router-dom';
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify } from 'react-icons/bs';
 
 function Header({ OpenSidebar }) {

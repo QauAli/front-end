@@ -50,18 +50,6 @@ class NavBar extends Component{
  <Link to="/Signup">
    <button id='btn1' >Sign-up</button> 
    </Link> 
-
-   <Link to="/Admindash">
-    <button id= 'btn1'> Admin_Dashboard</button>
-   </Link>
-   <Link to="/Customerdash">
-    <button id= 'btn1'>Customer_Dashboard</button>
-   </Link>
-   <Link to="/Employeedash">
-    <button id= 'btn1'>Employee_Dashboard</button>
-   </Link>
-
-
   </ul>
     </nav>
     

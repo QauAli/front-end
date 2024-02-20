@@ -42,14 +42,16 @@ function Profile() {
             <h4><i class="fa-solid fa-arrow-down fa-bounce"></i>upload image</h4>
               <input  className="file" type="file" accept="image/*" onChange={handleimage} />
               </div>
-
+          <span>
           <input
-            placeholder="Name"
+            placeholder="Enter Id for changings"
             type="text"
             value={name}
             onChange={handlename}
           />
-          <span>
+          </span>
+          <br/>
+          <span className="changings">
             <input
               placeholder="Change Name"
               type="text"
@@ -59,14 +61,8 @@ function Profile() {
           </span>
           <br />
 
-          <input
-            placeholder="Password"
-            type="text"
-            value={password}
-            onChange={handlepassword}
-          />
 
-          <span>
+          <span className="changings">
             <input
               placeholder="Change Password"
               type="text"
@@ -75,6 +71,15 @@ function Profile() {
             />
           </span>
           <br />
+          <span className="changings">
+          <input
+            placeholder="Change Email Address"
+            type="text"
+            value={password}
+            onChange={handlepassword}
+          />
+          <br/>
+          </span>
           <button>Update</button>
         </form>
       </div>

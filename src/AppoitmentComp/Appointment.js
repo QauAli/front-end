@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import NavBar from '../DynamicComponents/NavBar'
 import Hero from '../DynamicComponents/Hero'
 import AppointmentImg from '../images/AppointmentImg.jpg'
@@ -9,6 +9,7 @@ import ImgSlider from './ImgSlider'
 //import Dynamicform from './Dynamicform'
 
 function Appointment() {
+  const [notificationCount, setNotificationCount] = useState(0);
   return (
     <>
   <NavBar/>
@@ -22,7 +23,7 @@ function Appointment() {
     <div className='Appleft'><h3><i class="fa-regular fa-calendar-check"></i>
     GET YOUR APPOINTMENT</h3>
     <ImgSlider/>
-    <FormAppoitment/>
+    <FormAppoitment setNotificationCount={setNotificationCount} />
     </div>
     
 {/* =========closing of the appoitment div tag======================= */}

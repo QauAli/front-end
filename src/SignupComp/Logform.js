@@ -28,7 +28,7 @@ function Logform() {
     setvalues({ ...values, [e.target.name]: e.target.value });
   }
 
-  /*=============================submitbutton handling==============================================*/
+  /*=============================submit button handling==============================================*/
   function handlesubmit(e) {
     e.preventDefault();
 

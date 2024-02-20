@@ -1,61 +1,62 @@
-import React, { Component } from 'react'
-import  './NavBar.css'
-//! ./ dot slash means component or file is in the same folder
-import { Menuitems } from './Menuitems'
-import logo from '../images/logo.png'
-import { Link } from 'react-router-dom'
-//import Signup from '../routes/Signup'
-class NavBar extends Component{
+import React, { Component } from "react";
+import "./NavBar.css";
+import { Menuitems } from "./Menuitems";
+import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 
-  // this handles the state when click to the navbar items
-  state={
-     clicked: false};
-
-
-  handleClick=()=>
-  {
-    this.setState({clicked: !this.state.clicked})
-  }
+class NavBar extends Component {
+  state = {
+    clicked: false,
+    activeItem: '/', // Default active item is Home
+  };
+  
   
 
-  render(){
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
 
-  return (
-    <nav className='NavBaritems'>
-  <img src={logo}  alt="logo" className='navbar_Logo'/> 
+  // handleItemClick = (url) => {
+  //   console.log('Clicked URL:', url);
+  //   this.setState({ activeItem: url, clicked: false }, () => {
+  //     console.log('Updated URL:', this.state.activeItem);
+  //   });
+  
+  //   console.log('State after update:', this.state);
+  // };
 
-  <div className='menu-icons' onClick={this.handleClick}>
-  {// state is initialized when bars are clciked cross appears and when cross click bars are appear 
+  render() {
+
+    return (
+      <nav className="NavBaritems">
+        <img src={logo} alt="logo" className="navbar_Logo" />
+
+        <div className="menu-icons" onClick={this.handleClick}>
+          <i
+            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+          ></i>
+        </div>
+
+        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+          {Menuitems.map((item, index) => (
+            <li key={index}>
+                      <Link
+  to={item.url}
+  className={item.cName}>
+  <i className={item.icons}></i>
+  {item.title}
+</Link>
+
+
+            </li>
+          ))}
+          <Link to="/Signup">
+            <button id="btn1">Sign-up</button>
+          </Link>
+        </ul>
+      </nav>
+    );
   }
-  <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
-</div>
-
-{// make the navbar dynmic so reposnde according to the screen of user 
-}
-<ul className={this.state.clicked?"nav-menu active" : "nav-menu"}>
-
-{// this div nav-menu makes the navigation bar responsive 
-}
-
-{Menuitems.map((item,index)=>{
-  return(
-    // dynamically assign the navbar items names by using the navabaritems component
-    <li key={index} >
-      <Link to={item.url} className={item.cName} >
-    <i className={item.icons} ></i>{item.title}
-   </Link> 
-   </li>
-  );
-}) }
- <Link to="/Signup">
-   <button id='btn1' >Sign-up</button> 
-   </Link> 
-  </ul>
-    </nav>
-    
-    
-  );
-}
 }
 
 export default NavBar;

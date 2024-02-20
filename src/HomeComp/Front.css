@@ -221,3 +221,14 @@ button{
             margin-top: 42rem;
         }
     }
+    
+    .left {
+        padding: 2rem;
+        padding-top: 0%;
+        flex: 3;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        left: 0;
+        right: 0;
+    }

@@ -5,10 +5,10 @@
     .profileform h1{
       margin-bottom: 2rem;}
     .profile-image {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%; /* Creates a circular shape */
-      object-fit: cover; /* Preserve aspect ratio and cover container */
+      object-fit: cover;  /*Preserve aspect ratio and cover container */
       border: 2px solid black; /* Add a border if desired */
     }
 
@@ -29,7 +29,8 @@
       border: solid black;}
 
     .profileform span input{
-         margin-left: 3rem;
+         margin-left: -5rem;
+         width: 15rem;
     }
     .file{
       margin-left: -2rem;

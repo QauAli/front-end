@@ -2,6 +2,9 @@
 
 const arrays = {
     user: [],
-    role: []
+    isLoggedin:Boolean,
+    role:String,
+    email:String,
+    password:String
 }
 export default arrays;

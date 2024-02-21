@@ -10,7 +10,14 @@ function LoginMember(props) {
 
   function handleUser(data) {
     arrays.user.push(data);
+    arrays.isLoggedin = true;
+    arrays.email = data.email;
+    arrays.role = data.role;
+    arrays.password = data.password;
+    console.log(data);
+
     props.onRoleChange(data.role);
+    console.log("aaabbc"+arrays.isLoggedin);
     switch (data.role) {
       case 'admin':
         console.log("Navigating to Admindashboard");
@@ -29,7 +36,7 @@ function LoginMember(props) {
         navigate("/");
         break;
     }
-    navigate("/Profile", { state: { role: role } }); // Use type instead of data.role
+   // navigate("/Profile", { state: { role: role } }); // Use type instead of data.role
   }
   
 
@@ -82,6 +89,7 @@ function LoginMember(props) {
 
     if (!response.ok) {
       console.log("Email OR Password Incorrect");
+      arrays.isLoggedin = false;
     } else {
       // console.log("Login Successfully");
       //console.log("handle registration login role",data.role);
@@ -107,7 +115,7 @@ function LoginMember(props) {
         <input
           className="input"
           type="text"
-          placeholder="Enter UserName"
+          placeholder="Email"
           name="email"
           value={values.email}
           onChange={handlechange}

@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profileupdate.css';
 import { useLocation } from 'react-router-dom';
 import defaultAvatar from '../images/default-avatar.png';
+import arrays from "../variables/globals";
+
 
 function Profile() {
   const location = useLocation();
   // const role = location.state ? location.state.role : values.role;
+
+  useEffect(() => {
+  
+    if(arrays.isLoggedin){
+      setvalues({...values, email:arrays.email, password:arrays.password})
+     
+    }
+
+    console.log("Email="+arrays.email + "password="+arrays.password+"role="+arrays.role);
+
+  },);
+  
 
   const [values, setvalues] = useState({
     email: "",

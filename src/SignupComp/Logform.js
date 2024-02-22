@@ -15,11 +15,6 @@ function Logform() {
     password: "",
     // confrim_password: ''
   });
-  const [type, setType] = useState("admin");
-  function handleSelect(e) {
-    setType(e.target.value);
-  }
-
   const [errors, setErrors] = useState({});
   // const [isChecked, setIsChecked] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
@@ -143,7 +138,7 @@ function Logform() {
         </div>
 
         <div className="formBx">
-        <LoginMember onRoleChange={(role) => setType(role)} />
+        <LoginMember/>
 
 
           {/* ========================2ndform==================== */}

@@ -1,28 +1,31 @@
+.profile-pic{
+  margin-top: -38rem;
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Creates a circular shape */
+  object-fit: cover;  /*Preserve aspect ratio and cover container */
+  border: 2px solid black; /* Add a border if desired */
+}
+
+.default-avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Creates a circular shape */
+  object-fit: cover; /* Preserve aspect ratio and cover container */
+  border: 2px solid black; }
+
+  /*========================== update profile component css============================= */
+
+
 .profileform{
-    margin-top: -39rem;
+    margin-top: 1rem;
     margin-bottom: 6rem;
 }
     .profileform h1{
       margin-bottom: 2rem;}
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%; /* Creates a circular shape */
-      object-fit: cover;  /*Preserve aspect ratio and cover container */
-      border: 2px solid black; /* Add a border if desired */
-    }
 
-    .default-avatar{
-      width: 200px;
-      height: 200px;
-      border-radius: 50%; /* Creates a circular shape */
-      object-fit: cover; /* Preserve aspect ratio and cover container */
-      border: 2px solid black; 
-      margin-bottom: 4rem;
-      /* margin-left: 13rem; */
-
-    }
-    
 
     .profileform input{
       width: 15rem;

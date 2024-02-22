@@ -91,8 +91,6 @@ function LoginMember(props) {
       console.log("Email OR Password Incorrect");
       arrays.isLoggedin = false;
     } else {
-      // console.log("Login Successfully");
-      //console.log("handle registration login role",data.role);
       handleUser(data);
     }
   }

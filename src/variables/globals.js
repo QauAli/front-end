@@ -1,6 +1,7 @@
 
 
 const arrays = {
-    user: []
+    user: [],
+    role: []
 }
 export default arrays;

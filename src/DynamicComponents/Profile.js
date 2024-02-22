@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
 import './Profileupdate.css';
+import { useLocation } from 'react-router-dom';
 import defaultAvatar from '../images/default-avatar.png';
 
 function Profile() {
-  const [name, setname] = useState('');
-  const [password, setpassword] = useState('');
+  const location = useLocation();
+  // const role = location.state ? location.state.role : values.role;
+
+  const [values, setvalues] = useState({
+    email: "",
+    password: "",
+    name: "",
+    newpassword: "",
+    role: location.state ? location.state.role : '',
+  });
   const [image, setimage] = useState('');
   const [imagePreview, setImagePreview] = useState('');
 
-  const handlename = (event) => {
-    setname(event.target.value);
-  };
-
-  const handlepassword = (event) => {
-    setpassword(event.target.value);
-  };
+  function handlechange(e) {
+    setvalues({ ...values, [e.target.name]: e.target.value });
+  }
 
   const handleimage = (event) => {
     const selectedImage = event.target.files[0];
@@ -22,12 +27,36 @@ function Profile() {
     setImagePreview(URL.createObjectURL(selectedImage));
   };
 
-  const handlesubmit = (event) => {
+  const handlesubmit = async (event) => {
     event.preventDefault();
-    console.log('Updated Name:', name);
-    console.log('Updated Password:', password);
+    console.log('Updated Name:', values.name);
+    console.log('Updated Password:', values.newpassword);
     console.log('Updated Image:', image);
-  };
+
+    await handleUpdate();
+  }
+  async function handleUpdate() {
+    const updateObj = {
+      name:values.name,
+      email: values.email,
+      password: values.password,
+      role: values.role,
+    };
+    console.log("registration object",updateObj);
+
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updateObj),
+    };
+    const response = await fetch("http://127.0.0.1:5000/ProfileUpdate", requestOptions);
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.log("Email OR Password Incorrect");
+    } else {
+      console.log("update profile successfully")
+    }}
 
   return (
     <div>
@@ -44,19 +73,21 @@ function Profile() {
               </div>
           <span>
           <input
-            placeholder="Enter Id for changings"
+            name="email"
+            placeholder="Enter Email-Id"
             type="text"
-            value={name}
-            onChange={handlename}
+            value={values.email}
+            onChange={handlechange}
           />
           </span>
           <br/>
           <span className="changings">
             <input
+             name="name"
               placeholder="Change Name"
               type="text"
-              value={name}
-              onChange={handlename}
+              value={values.name}
+              onChange={handlechange}
             />
           </span>
           <br />
@@ -64,23 +95,25 @@ function Profile() {
 
           <span className="changings">
             <input
-              placeholder="Change Password"
+             name="password"
+              placeholder="Enter Password"
               type="text"
-              value={password}
-              onChange={handlepassword}
+              value={values.password}
+              onChange={handlechange}
             />
           </span>
           <br />
           <span className="changings">
           <input
-            placeholder="Change Email Address"
+           name="newpassword"
+            placeholder="Enter new password"
             type="text"
-            value={password}
-            onChange={handlepassword}
+            value={values.newpassword}
+            onChange={handlechange}
           />
           <br/>
           </span>
-          <button>Update</button>
+          <button type="submit">Update</button>
         </form>
       </div>
     </div>

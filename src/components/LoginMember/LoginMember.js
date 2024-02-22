@@ -4,13 +4,13 @@ import arrays from "../../variables/globals";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-function LoginMember() {
+function LoginMember(props) {
   const [role, setRole] = useState("admin");
   const navigate = useNavigate();
 
   function handleUser(data) {
-
     arrays.user.push(data);
+    props.onRoleChange(data.role);
     switch (data.role) {
       case 'admin':
         console.log("Navigating to Admindashboard");
@@ -26,9 +26,10 @@ function LoginMember() {
         break;
       default:
         console.log("Role not recognized. Navigating to home page");
-        navigate("/");// refer to home page if role is not recognized
+        navigate("/");
         break;
     }
+    navigate("/Profile", { state: { role: role } }); // Use type instead of data.role
   }
   
 

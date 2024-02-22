@@ -143,7 +143,8 @@ function Logform() {
         </div>
 
         <div className="formBx">
-          <LoginMember/>
+        <LoginMember onRoleChange={(role) => setType(role)} />
+
 
           {/* ========================2ndform==================== */}
           <form className="form signupform" onSubmit={handlesubmit}>

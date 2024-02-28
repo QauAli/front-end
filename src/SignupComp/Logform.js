@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./Logform.css";
-import { Link } from "react-router-dom";
 import Validation from "../DynamicComponents/Validation";
 import "../Extraforms/Loginformstyles.css";
+import Form from "react-bootstrap/Form";
 // import Loginform from '../routes/Loginform';
 // import SignIn from './SignIn';
 
@@ -13,17 +13,21 @@ function Logform() {
     name: "",
     email: "",
     password: "",
-    // confrim_password: ''
   });
+  const [role, setRole] = useState("customer");
   const [errors, setErrors] = useState({});
-  // const [isChecked, setIsChecked] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
+
   /*============================values-entered handling=============================================*/
   function handlechange(e) {
     setvalues({ ...values, [e.target.name]: e.target.value });
   }
 
-  /*=============================submit button handling==============================================*/
+  function handleRole(e) {
+    setRole(e.target.value);
+  }
+
+  /*============================= submit button handling==============================================*/
   function handlesubmit(e) {
     e.preventDefault();
 
@@ -42,7 +46,6 @@ function Logform() {
         values.password
       );
 
-      // setIsLoggedIn(true); this is handle in the handleregistration function
       handleRegistration(); // Call the registration function if there are no client-side validation errors
     } else {
       // Validation errors exist, update the errors state
@@ -57,34 +60,34 @@ function Logform() {
   }
 
   async function handleRegistration() {
-    const registrationObj = {
-      C_FirstName: values.name,
-      C_Email_Id: values.email,
-      Password: values.password,
+    var registrationObj;
+      registrationObj = {
+        name:values.name,
+        email: values.email,
+        password:values.password,
+        role: role,
+      };
+
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(registrationObj),
     };
 
-    console.log("ali");
+    console.log(registrationObj);
 
-    // const requestOptions = {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(registrationObj),
-    // };
+    const response = await fetch(
+      "http://127.0.0.1:5000/Signup",
+      requestOptions
+    );
+    const data = await response.json();
 
-    // console.log(registrationObj);
-
-    // const response = await fetch(
-    //   "http://127.0.0.1:5000/customer",
-    //   requestOptions
-    // );
-    // const data = await response.json();
-
-    // if (!response.ok) {
-    //   console.log("User Not Registered");
-    // } else {
-    //   console.log("Registered Successfully");
-    //   console.log(JSON.stringify(data));
-    // }
+    if (!response.ok) {
+      console.log("User Not Registered");
+    } else {
+      console.log("Registered Successfully");
+      console.log(JSON.stringify(data));
+    }
   }
 
   /*===================checkbox handling=================================*/
@@ -96,12 +99,6 @@ function Logform() {
     // setIsChecked(false);
     setIsLoggedIn(false);
   };
-
-  /*===================logout-button handling=================================*/
-  function handleLogout() {
-    setIsLoggedIn(false); // Set login state to false on logout
-    setvalues({ name: "", password: "", email: "" }); // Clear form data
-  }
 
   //^ -------------------------handles sliding of form-----------------
   const htmlbodyRef = useRef(null);
@@ -138,14 +135,19 @@ function Logform() {
         </div>
 
         <div className="formBx">
-        <LoginMember/>
-
+          <LoginMember />
 
           {/* ========================2ndform==================== */}
           <form className="form signupform" onSubmit={handlesubmit}>
             <h1 className="">
               <i class="fa-solid fa-user-plus"></i>Sign Up
             </h1>
+
+            <Form.Select size="lg" value={role} onChange={handleRole}>
+              <option value="customer">Customer</option>
+              <option value="staff">Staff</option>
+            </Form.Select>
+
             <div className="">
               <label className="">Username</label>
               <input

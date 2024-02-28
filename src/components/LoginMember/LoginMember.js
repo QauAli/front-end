@@ -4,7 +4,7 @@ import arrays from "../../variables/globals";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-function LoginMember(props) {
+function LoginMember() {
   const [role, setRole] = useState("admin");
   const navigate = useNavigate();
 
@@ -15,9 +15,8 @@ function LoginMember(props) {
     arrays.role = data.role;
     arrays.password = data.password;
     console.log(data);
-
-    props.onRoleChange(data.role);
     console.log("aaabbc"+arrays.isLoggedin);
+    
     switch (data.role) {
       case 'admin':
         console.log("Navigating to Admindashboard");
@@ -36,7 +35,6 @@ function LoginMember(props) {
         navigate("/");
         break;
     }
-   // navigate("/Profile", { state: { role: role } }); // Use type instead of data.role
   }
   
 
@@ -66,10 +64,10 @@ function LoginMember(props) {
     e.preventDefault();
   
     console.log("handle Submit called");
-    await handleRegistration();
+    await handleLogin();
   }
   
-  async function handleRegistration() {
+  async function handleLogin() {
     const registrationObj = {
       email: values.email,
       password: values.password,

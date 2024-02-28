@@ -1,21 +1,14 @@
-import React from 'react'
-import Logform from './Logform'
+import React from "react";
+import Logform from "./Logform";
 
 const Signup = () => {
   return (
     <>
-    <div className='signup-container'>
-
-
-
-     <Logform/> 
-
-
-
-    </div>
-    
-</>
-  )
-}
+      <div className="signup-container">
+        <Logform />
+      </div>
+    </>
+  );
+};
 
 export default Signup;

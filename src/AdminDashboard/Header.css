@@ -16,4 +16,21 @@
     display: none;
   }
 
-  
+  .dash-header-right {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+.dash-header-right .bell{
+  margin-left: 35rem; 
+}
+
+.dash-header-right sup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+}

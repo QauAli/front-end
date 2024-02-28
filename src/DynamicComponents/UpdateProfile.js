@@ -14,14 +14,14 @@ function UpdateProfile() {
       setvalues({ ...values, email: arrays.email, password: arrays.password });
     }
 
-    console.log(
-      "Email=" +
-        arrays.email +
-        "password=" +
-        arrays.password +
-        "role=" +
-        arrays.role
-    );
+    // console.log(
+    //   "Email=" +
+    //     arrays.email +
+    //     "password=" +
+    //     arrays.password +
+    //     "role=" +
+    //     arrays.role
+    // );
   });
 
   function handlechange(e) {
@@ -66,7 +66,7 @@ function UpdateProfile() {
         <form onSubmit={handlesubmit}>
           <h1>Want to Update profile?</h1>
           <span>
-            <label>Email </label>
+            <label>AutoFill Email Id </label>
             <input
               name="email"
               placeholder="Email-Id"
@@ -77,10 +77,10 @@ function UpdateProfile() {
           </span>
           <br />
           <span className="changings">
-            <label>Name </label>
+            <label>Change Name </label>
             <input
               name="name"
-              placeholder="Change Name"
+              placeholder="Enter Name"
               type="text"
               value={values.name}
               onChange={handlechange}
@@ -90,9 +90,10 @@ function UpdateProfile() {
           <br />
 
           <span className="changings">
+          <label>Current Password</label>
             <input
               name="password"
-              placeholder=" Current Password"
+              placeholder=" Password"
               type="text"
               value={values.password}
               onChange={handlechange}
@@ -100,6 +101,7 @@ function UpdateProfile() {
           </span>
           <br />
           <span className="changings">
+          <label>New Password </label>
             <input
               name="newpassword"
               placeholder="Enter new password"

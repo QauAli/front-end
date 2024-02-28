@@ -16,7 +16,6 @@ function FormAppoitment({ setNotificationCount }) {
         description: '',
       };
       const [values, setvalues] = useState(initialFormState);
-      const[IsRead, setIsRead] = useState(false);
       const [errors, setErrors]=useState({})
       const [isSubmitted, setIsSubmitted] = useState(false);
       
@@ -49,18 +48,6 @@ function FormAppoitment({ setNotificationCount }) {
           } else {
             console.log("Appointment Registered Successfully");
             console.log(JSON.stringify(data));
-
-            setIsRead(true);
-            console.log(setIsRead);
-
-             // Fetch and update notification count after successful registration
-      const notificationResponse = await fetch('http://127.0.0.1:5000/unread_appointments');
-      const notificationData = await notificationResponse.json();
-
-      if (notificationResponse.ok) {
-        setNotificationCount(notificationData.new_appointment_count);
-      }
-      
             // Dispatch a custom event when the appointment is registered
             const event = new CustomEvent("newAppointment", { detail: data });
             window.dispatchEvent(event);

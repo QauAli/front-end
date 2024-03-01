@@ -1,6 +1,7 @@
 .profile-pic{
-  margin-top: -34rem;
+  margin-top: 1rem;
   margin-right: 15rem;
+  text-align: center;
 }
 .profile-image,
 .default-avatar {
@@ -10,17 +11,26 @@
   object-fit: cover;
   border: 2px solid black;
 }
+.welcome-note {
+  text-align: center;
+  margin-top: -35rem; /* Adjust this margin as needed */
+   }
+  .welcome-note h2{
+    font-size: 3rem;
+    margin-left: -21rem;
+  }
 
   /*========================== update profile component css============================= */
 
 
 .profileform form{
-    margin-top: -10rem;
+    margin-top: -13rem;
     margin-bottom: 6rem;
     border: solid black;
     width: 25rem;
     height: 28rem;
     margin-left: 65rem;
+    margin-right: auto;
     background-color: rgb(208, 209, 211);
     
 }

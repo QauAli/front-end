@@ -66,7 +66,8 @@ function UpdateProfile() {
         <form onSubmit={handlesubmit}>
           <h1>Want to Update profile?</h1>
           <span>
-            <label>AutoFill Email Id </label>
+            <label> Email Id</label>
+            <br/>
             <input
               name="email"
               placeholder="Email-Id"

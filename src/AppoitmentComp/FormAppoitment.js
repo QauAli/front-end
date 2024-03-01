@@ -3,7 +3,7 @@ import './AppoitmentStyles.css'
 import Validation from '../DynamicComponents/Validation';
 import right from "../images/right.png"
 
-function FormAppoitment({ setNotificationCount }) {
+function FormAppoitment({ }) {
   
     const initialFormState={
         name: '',

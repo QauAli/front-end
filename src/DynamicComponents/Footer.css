@@ -84,7 +84,7 @@ transform: translate(-10px);
     bottom: 0;
     height: 120px;
     width: 100%;
-    background: url('../images/wave.png') repeat-x;
+    background: url('../images/wave.new.png') repeat-x;
     background-size: 250rem 30rem;
     animation: animate 15s linear infinite;
   }

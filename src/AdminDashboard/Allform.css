@@ -37,3 +37,27 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     background-color: gray;}
+
+
+   
+
+    .close-icon{
+    content: 'x';
+    cursor: pointer;
+    position: absolute;
+    margin-left: 35rem;
+    margin-top: -21rem;
+    background: #ededed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+    z-index: 999;
+    }
+
+/*====================================== feedback form stylings============================================= */
+
+    

@@ -3,6 +3,7 @@ import './Profileupdate.css';
 import UpdateProfile from './UpdateProfile';
 import defaultAvatar from '../images/default-avatar.png';
 import arrays from '../variables/globals';
+import Footer from '../DynamicComponents/Footer'
 
 function Profile() {
   const [image, setImage] = useState('');
@@ -53,6 +54,9 @@ function Profile() {
 
   return (
     <div>
+      <div className="welcome-note">
+        <h2>Welcome, {arrays.email}</h2>
+      </div>
       <div className="profile-pic">
         <img
           src={imagePreview || defaultAvatar}
@@ -74,6 +78,7 @@ function Profile() {
         )}
       </div>
       <UpdateProfile />
+      <Footer/>
     </div>
   );
 }

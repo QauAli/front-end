@@ -1,0 +1,31 @@
+.feedbackform {
+    margin-top: 5rem;
+    margin-left: 36rem;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-container { color: white;}
+  .visible {display: block; }
+  
+  .hidden {display: none; }
+  
+  .feedbackarea {
+    width: 36rem;
+    border: solid black;
+    background-color: rgb(247, 247, 247);
+  }
+  
+  .feedback_button,
+  .feedback_cancel_button {
+    margin-top: -1rem;
+    width: 10rem;
+  }
+
+  .feedback_cancel_button{
+    background-color: red;
+    color: white;
+  }
+  

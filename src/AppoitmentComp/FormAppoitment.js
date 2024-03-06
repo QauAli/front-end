@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import './AppoitmentStyles.css'
 import Validation from '../DynamicComponents/Validation';
-import right from "../images/right.png"
 
 function FormAppoitment({ }) {
   
@@ -67,32 +66,36 @@ function handlechange (e) {
 
 
     /*=============================submitbutton handling==============================================*/ 
-function handlesubmit(e) {
-    e.preventDefault();
-    // Show confirmation box
-    const isConfirmed = window.confirm("Are you sure you want to book the appointment?");
-    alert("Thank you for booking appointment");
-
-    if (isConfirmed) {
-  
-    const validationErrors = Validation(values);
-
-    if (Object.keys(validationErrors).length === 0) {
-        // No validation errors, you can proceed with form submission logic here
-        console.log('Book appointment:', values.name, 'and email:', values.email);
-
-       // Call  handleMessage function  or other logic to execute after confirmation
-       handleMessage();
-      } else {
+    function handlesubmit(e) {
+      e.preventDefault();
+    
+      // Show confirmation box
+      const isConfirmed = window.confirm("Are you sure you want to book the appointment?");
+    
+      if (isConfirmed) {
+        alert("Thank you for booking appointment");
+    
+        const validationErrors = Validation(values);
+    
+        if (Object.keys(validationErrors).length === 0) {
+          // No validation errors, you can proceed with form submission logic here
+          console.log('Book appointment:', values.name, 'and email:', values.email);
+    
+          // Call handleMessage function or other logic to execute after confirmation
+          handleMessage();
+          
+        } else {
           // Validation errors exist, update the errors state
           setErrors(validationErrors);
+        }
+      } else {
+        // User canceled the confirmation
+        alert("Not interested in booking appointment");
+        console.log("Appointment booking canceled");
       }
-  } else {
-      // User canceled the confirmation
-      console.log("Appointment booking canceled");
-      
-  }
-}
+    }
+    
+    
   
 
 
@@ -120,16 +123,16 @@ function handlesubmit(e) {
                 
 
 
-                <label>Appoitment Date
+                <label>Appointment Date
                 <input type="date"  name="appointmentDate"  value={values.appointmentDate} onChange={handlechange}/>
                 </label>
-                <label>Appoitment Time
+                <label>Appointment Time
                 <input type="time"  name="appointmentTime"  value={values.appointmentTime} onChange={handlechange}/>
                 </label>
     
 
 
-                <label>Car Model\Make
+                <label className='form2_label'>Car Model\Make
                 <input type="text"  name="carModelMake"  value={values.carModelMake} onChange={handlechange}/>
                 </label>
 
@@ -141,14 +144,15 @@ function handlesubmit(e) {
                 <input type="text"  name="city"  value={values.city} onChange={handlechange}/>
 </label>
 
-            <label>Description</label>
+            <label className='description'>Description</label>
+  
             <textarea rows="6"
             name="description"
         value={values.description}
         onChange={handlechange}>
         </textarea>
 
-        <button type='submit'onClick={handleMessage}> Send Message</button>
+        <button type='submit'onClick={handleMessage}>Book Appointment</button>
                     
         
 
@@ -157,7 +161,6 @@ function handlesubmit(e) {
             </form>
             </div>
           
-            {/* <img className='rightside' src={right} alt=""/> */}
         </div>
         
   )

@@ -34,3 +34,15 @@
   padding: 0.25rem 0.5rem;
   border-radius: 50%;
 }
+
+
+
+.envelop sup {
+  position: absolute;
+  background-color: orange;
+  color: black;
+  border-radius: 50%;
+  top: 1rem;
+  margin-left: .15rem;
+  padding: 0.25rem 0.5rem;
+}

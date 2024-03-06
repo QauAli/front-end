@@ -2,54 +2,60 @@
 import './Header.css'
 import '../DynamicComponents/Profile'
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify } from 'react-icons/bs';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
+import arrays from '../variables/globals';
 
 
 
 function Header({ OpenSidebar }) {
-  const [notificationCount, setNotificationCount] = useState(0);
 
-  
-  const handleBellClick = async () => {
-    try {
-        const markNotificationsReadResponse = await fetch('http://127.0.0.1:5000/mark_read', {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-        });
+const fetchNotifications = async () => {
+  try {
+    const response = await fetch ('http://127.0.0.1:5000/unread_appointments');
+    const data = await response.json();
 
-        if (markNotificationsReadResponse.ok) {
-            const data = await markNotificationsReadResponse.json();
-            setNotificationCount(data.new_appointments_count);
-        } else {
-            console.log("Failed to mark notifications as read");
-        }
-    } catch (error) {
-        console.error("Error marking notifications as read:", error);
+    if (response.ok) {
+      arrays.newAppointments=true;
+      arrays.totalAppointments = data.new_appointments.new_appointments_count;
+      console.log("appointments="+arrays.newAppointments + arrays.totalAppointments);
+
+    } else {
+      console.log("Failed to fetch notifications");
+      arrays.newAppointments=false;
+      arrays.totalAppointments = 0;
     }
+  } catch (error) {
+    console.error("Error fetching notifications:", error);
+  }
+};
+
+const fetchUnreadMessages = async () => {
+  try {
+    const response = await fetch('http://127.0.0.1:5000/unread_messages');
+    const data = await response.json();
+
+    if (response.ok) {
+      arrays.newMessages = true;
+      arrays.totalMessages = data.new_messages.new_messages_count;
+      console.log("messages=" + arrays.newMessages + arrays.totalMessages);
+    } else {
+      console.log("Failed to fetch unread messages");
+      arrays.newMessages = false;
+      arrays.totalMessages = 0;
+    }
+  } catch (error) {
+    console.error("Error fetching unread messages:", error);
+  }
 };
 
 
 
 useEffect(() => {
-  const fetchNotifications = async () => {
-    try {
-      const response = await fetch('http://127.0.0.1:5000/unread_appointments');
-      const data = await response.json();
-
-      if (response.ok) {
-        setNotificationCount(data.new_appointments_count);
-      } else {
-        console.log("Failed to fetch notifications");
-      }
-    } catch (error) {
-      console.error("Error fetching notifications:", error);
-    }
-  };
   fetchNotifications();
-  const intervalId = setInterval(fetchNotifications, 60000); 
-
-  return () => clearInterval(intervalId);
+  fetchUnreadMessages();
 }, []);
+
+
 
 
 
@@ -63,11 +69,15 @@ useEffect(() => {
       </div>
       <div className='dash-header-right'>
         
-        <sup>{notificationCount > 0 && notificationCount}</sup>
-        <BsFillBellFill  className='bell' onClick={handleBellClick} /></div>
+        <sup>{arrays.newAppointments > 0 && arrays.totalAppointments}</sup>
+        <BsFillBellFill  className='bell'/></div>
         
+        <div className='envelop'>
+  <sup>{arrays.newMessages > 0 && arrays.totalMessages}</sup>
+  <BsFillEnvelopeFill className='icon' />
+</div>
+
         <div>
-        <BsFillEnvelopeFill className='icon' />
         <BsPersonCircle className='icon' />
         </div>
     

@@ -4,7 +4,6 @@ import arrays from "../variables/globals";
 import { Link, useNavigate } from "react-router-dom";
 import Feedbackform from "./Feedbackform";
 import "../AdminDashboard/Allform.css";
-// this link is used for redirecting to the sepcific section of the same page when click on linked tag
 import { BsListCheck, BsPersonCircle } from "react-icons/bs";
 
 function C_Sidebar({ openSidebarToggle, OpenSidebar }) {

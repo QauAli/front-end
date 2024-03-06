@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ReactTable.css";
 import Addform from "./Addform";
 import Viewform from "./Viewform";
+import CustomerTable from "./CustomerTable";
 
 function ReactTable() {
   const data = [
@@ -10,6 +11,7 @@ function ReactTable() {
     { fname: "Appointments" },
     { fname: "Bills" },
     { fname: "Services" },
+    {fname: "CustomerTable"},
   ];
 
   const [showAddform, setShowAddform] = useState(false);
@@ -96,6 +98,7 @@ function ReactTable() {
           <span className="close" onClick={() => setShowDeleteform(false)}>x</span>
           <button type='submit' className="Addbutton">Delete</button>
         </div>
+        
       )}
     </div>
   );

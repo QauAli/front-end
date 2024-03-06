@@ -3,6 +3,11 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Profile from "../DynamicComponents/Profile";
 import ReactTable from "./ReactTable";
+import CustomerTable from "./CustomerTable";
+import EmployeeTable from './EmployeeTable';
+import BillsTable from "./BillsTable";
+import ServicesTable from "./ServicesTable";
+import AppointmentTable from "./AppointmentTable";
 
 function Admindash() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
@@ -40,10 +45,11 @@ function Admindash() {
         showComponent={showComponent}
       />
       {activeComponent === "Profile" ? <Profile /> : null}
-      {activeComponent === "Bills" ? <ReactTable /> : null}
-      {activeComponent === "Customers" ? <ReactTable /> : null}
-      {activeComponent === "Employees" ? <ReactTable /> : null}
-      {activeComponent === "Services" ? <ReactTable /> : null}
+      {activeComponent === "Bills" ? <BillsTable /> : null}
+      {activeComponent === "Customers" ? <CustomerTable /> : null}
+      {activeComponent === "Employees" ? <EmployeeTable /> : null}
+      {activeComponent === "Services" ? <ServicesTable /> : null}
+      {activeComponent === "Appointments" ? <AppointmentTable /> : null}
     </div>
   );
 }

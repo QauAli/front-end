@@ -1,4 +1,5 @@
 import React from "react";
+import './Sidebar.css'
 import { Link, useNavigate } from "react-router-dom";
 import arrays from "../variables/globals";
 import {
@@ -49,26 +50,35 @@ function Sidebar({ openSidebarToggle, OpenSidebar, showComponent }) {
           className="sidebar-list-item"
           onClick={() => showComponent("Bills")}
         >
-          <BsGrid1X2Fill className="icon" /> Bills
+          <BsGrid1X2Fill className="icon" /> Bills Record
         </li>
         <li
           className="sidebar-list-item"
           onClick={() => showComponent("Services")}
         >
-          <BsListCheck className="icon" /> Services
+          <BsListCheck className="icon" /> Services Record 
         </li>
         <li
           className="sidebar-list-item"
           onClick={() => showComponent("Customers")}
         >
-          <BsPeopleFill className="icon" /> Customers
+          <BsPeopleFill className="icon" />Customers Record
         </li>
         <li
           className="sidebar-list-item"
           onClick={() => showComponent("Employees")}
         >
-          <BsPeopleFill className="icon" /> Employees
+          <BsPeopleFill className="icon" />Employees Record
         </li>
+
+        <li
+          className="sidebar-list-item"
+          onClick={() => showComponent("Appointments")}
+        >
+          <BsPeopleFill className="icon" />Appointments Record
+        </li>
+
+
         <li className="sidebar-list-item" onClick={clearData}>
           <i class="fa-solid fa-right-from-bracket"></i> Logout
         </li>

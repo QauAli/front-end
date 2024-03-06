@@ -55,6 +55,8 @@ const data = await response.json();
     return;
   }
 const responseData = await response.json();
+const event = new CustomEvent("newMessage", { detail: data });
+            window.dispatchEvent(event);
 };
   
  

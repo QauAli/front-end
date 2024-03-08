@@ -23,7 +23,7 @@ function Appointment() {
     <div className='Appleft'><h3><i class="fa-regular fa-calendar-check"></i>
     GET YOUR APPOINTMENT</h3>
     <ImgSlider/>
-    <FormAppoitment setNotificationCount={setNotificationCount} />
+    <FormAppoitment/>
     </div>
     
 {/* =========closing of the appoitment div tag======================= */}

@@ -9,7 +9,6 @@ function Dashboard() {
     <div className="Dashboard-grid-container">
       <Home/>
       <BarChart />
-      <Piechart />
     </div>
   );
 }

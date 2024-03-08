@@ -88,9 +88,9 @@ flex-direction: column;
 #bg-text{
     background-color: var(--lightgray);
     position: relative;
-    margin: 10px auto; /* Centered the element */
+    margin: 100px auto; /* Centered the element */
     max-width: 90rem; /* Changed width to max-width for responsiveness */
-    height: 9rem;
+    height: 12rem;
     border-radius: 2rem;
 }
  
@@ -103,8 +103,8 @@ flex-direction: column;
 #bttn{
     background-color: black;
     color: white;
-    margin-top: 1rem auto;
-    height: 3rem;
+    margin-top: 100rem auto;
+    height: 4rem;
     width: 13rem;
     font-size: 1rem;
     display: center; /* Ensured block display for centering */
@@ -125,7 +125,7 @@ flex-direction: column;
 
     .reason, 
     #bg-text {
-        width: 90%; /* Adjusted width for smaller screens */
+        width: 100%; /* Adjusted width for smaller screens */
     }
 
     .heading1, 

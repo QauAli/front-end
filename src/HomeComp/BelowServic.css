@@ -12,8 +12,9 @@
 
 }
 .img{
-    height: 423px;
-    width: 780px;
+    height: 470px;
+    width: 880px;
+    margin-left: 2rem;
     
 }
 .img:hover{
@@ -44,14 +45,3 @@ font-weight: bold;
     color: black;
     padding-bottom: 1rem;
      font-size: 0.75rem; }
-
- /* .bg-strips{
-    position: initial;
-    top:4rem;
-    left: 20rem;
-    z-index: -1;
-    width: 8rem;
-   /* height: 16rem; */
-   /* float: initial;
-
-}  */ 

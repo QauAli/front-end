@@ -1,94 +1,96 @@
-.first{
+.first {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0 1rem; /* Adjusted padding for mobile screens */
     margin-top: 1rem;
-
 }
 
-.second
-{
+.second {
     display: flex;
     font-weight: bold;
-    gap: 1.5rem;
-    font-size: 3rem;
+    gap: 1rem; /* Adjusted gap for mobile screens */
+    font-size: 2rem; /* Adjusted font size for mobile screens */
     justify-content: center;
     color: white;
     font-style: italic;
-    padding-top: 2rem;
+    padding-top: 1rem; /* Adjusted padding for mobile screens */
     align-items: center;
-    font-size: 3rem;
-    /* justify-content: space-evenly; */
-
-
 }
-.second1{
+
+.second1 {
     padding-top: 0rem;
     color: white;
     display: flex;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem; /* Adjusted font size for mobile screens */
     justify-content: center;
+}
 
+#small {
+    justify-content: center;
+    font-style: italic;
+    margin-right: 0; /* Removed negative margin for mobile screens */
+    margin-left: 0; /* Removed negative margin for mobile screens */
 }
-#small{
-justify-content: center;
-font-style: italic;
-margin-right: -3rem;
-margin-left: 0rem;
-}
-.small{
+
+.small {
     justify-content: center;
     color: black;
     font-style: italic;
     background-color: var(--lightgray);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Adjusted font size for mobile screens */
 }
 
-.imageEdit
-{
-    width: 1050px;
-    height: 800px;
+.imageEdit {
+    width: 100%; /* Adjusted width to be responsive */
+    max-width: 100%; /* Set max-width to 100% */
+    height: auto; /* Make height automatic to maintain aspect ratio */
 }
 
-
-
-
-
-
-/*===================== css for the CardFront================ */
-.carpix{
+/* CSS for the CardFront */
+.carpix {
     display: flex;
-    gap: 0rem;
-
+    gap: 1rem; /* Adjusted gap for mobile screens */
+    flex-wrap: wrap; /* Added flex-wrap to handle multiple items on smaller screens */
+    justify-content: center; /* Centered items horizontally */
 }
-.pix{
+
+.pix {
     display: flex;
     flex-direction: column;
-    background-color:var(--lightgray);
-    padding: 0rem;
-    gap: 0rem;
+    background-color: var(--lightgray);
+    padding: 1rem; /* Adjusted padding for mobile screens */
+    gap: 1rem; /* Adjusted gap for mobile screens */
     color: black;
     justify-content: space-between;
-width: 270px;
-margin-left: 4rem;
-transition: border-color 0.3s, box-shadow 0.3s;
+    width: calc(50% - 1rem); /* Set width to half minus gap for mobile screens */
+    max-width: 370px; /* Added max-width for larger screens */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.pix:hover{
-  background:white;
-   cursor: pointer;
-   transform: scale(1.5);
+.pix:hover {
+    background: white;
+    cursor: pointer;
+    transform: scale(1.1); /* Adjusted scale for mobile screens */
 }
-.text1
-{text-transform: uppercase;
+
+.text1 {
+    text-transform: uppercase;
     font-weight: bold;
-align-items: center;}
+    align-items: center;
+}
 
+.text2 {
+    font-size: 1rem; /* Adjusted font size for mobile screens */
+    margin-left: 0.5rem; /* Adjusted margin for mobile screens */
+}
 
-
-.text2
-{font-size: large;
-margin-left: 1rem;}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .pix {
+        width: 100%; /* Set width to full for mobile screens */
+        max-width: none; /* Remove max-width for mobile screens */
+    }
+}

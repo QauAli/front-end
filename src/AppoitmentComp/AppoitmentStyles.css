@@ -96,3 +96,21 @@
     top: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .form2 textarea,
+  .content input,
+  .city {
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+  .Appleft h3{
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-left: -5rem;
+    font-size: 2rem;
+  
+  }
+  
+}

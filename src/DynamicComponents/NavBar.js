@@ -16,15 +16,6 @@ class NavBar extends Component {
     this.setState({ clicked: !this.state.clicked });
   };
 
-  // handleItemClick = (url) => {
-  //   console.log('Clicked URL:', url);
-  //   this.setState({ activeItem: url, clicked: false }, () => {
-  //     console.log('Updated URL:', this.state.activeItem);
-  //   });
-  
-  //   console.log('State after update:', this.state);
-  // };
-
   render() {
 
     return (

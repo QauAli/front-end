@@ -76,9 +76,9 @@ function UpdateProfile() {
               onChange={handlechange}
             />
           </span>
-          <br />
+          <br/>
           <span className="changings">
-            <label>Change Name </label>
+            <label>Change Name </label><br />
             <input
               name="name"
               placeholder="Enter Name"
@@ -91,7 +91,7 @@ function UpdateProfile() {
           <br />
 
           <span className="changings">
-          <label>Current Password</label>
+          <label>Current Password</label><br/>
             <input
               name="password"
               placeholder=" Password"
@@ -102,7 +102,7 @@ function UpdateProfile() {
           </span>
           <br />
           <span className="changings">
-          <label>New Password </label>
+          <label>New Password </label><br/>
             <input
               name="newpassword"
               placeholder="Enter new password"

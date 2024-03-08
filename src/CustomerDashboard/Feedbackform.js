@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import "./Feedbackform.css";
+import StarRatings from "react-star-ratings";
 import arrays from "../variables/globals";
 
 function Feedbackform() {
   const [feedback, setfeedback] = useState("");
   const [formVisible, setFormVisible] = useState(true);
+  const [rating, setRating] = useState(0);
   const initialFormState = {
     feedback: "",
+    rating: 0,
   };
   const [values, setvalues] = useState(initialFormState);
   const handlefeedback = (event) => {
     setfeedback(event.target.value);
     setvalues(initialFormState);
+  };
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
   };
 
   const handlesubmit = (event) => {
@@ -28,6 +34,7 @@ function Feedbackform() {
     const data = {
       C_Email_Id: email,
       Feedback: feedback,
+      Rating: rating,
     };
 
     fetch("http://127.0.0.1:5000/feedback", {
@@ -51,11 +58,13 @@ function Feedbackform() {
         alert("Failed to submit feedback");
       });
     setfeedback("");
+    setRating(0);
     
   };
   const handleRefresh = () => {
     // Clear feedback input when cancel button is clicked
     setfeedback("");
+    setRating(0);
   };
 
   const handleCancel = () => {
@@ -76,6 +85,13 @@ function Feedbackform() {
             value={feedback}
             onChange={handlefeedback}
           ></textarea>
+          <StarRatings
+            rating={rating}
+            starRatedColor="gold"
+            changeRating={handleRatingChange}
+            numberOfStars={5}
+            name="rating"
+          />
           <div>
             <button type="submit" className="feedback_button">
               Send Feedback

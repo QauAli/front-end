@@ -28,7 +28,7 @@
     margin-bottom: 6rem;
     border: solid black;
     width: 25rem;
-    height: 28rem;
+    height: 30rem;
     margin-left: 65rem;
     margin-right: auto;
     background-color: rgb(208, 209, 211);
@@ -37,15 +37,25 @@
     .profileform h1{
       margin-bottom: 2rem;}
 
+      /* .profileform span {
+        display: flex;
+        flex-direction: column;
+      }
+       */
+      .profileform label {
+        margin-top: .2rem;
+        margin-bottom: 0.1rem;
+      }
+
 
     .profileform input{
-      width: 15rem;
-      border: solid black;}
+      width: 16rem;
+      border:  1px solid black;}
 
-    .profileform span input{
-         /* margin-left: 35rem; */
+    /* .profileform span input{
+
          width: 15rem;
-    }
+    } */
     .file{
       margin-left: -2rem;
       margin-bottom: 2rem;

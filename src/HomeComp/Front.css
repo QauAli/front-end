@@ -173,62 +173,45 @@ button{
     padding-top: 5rem;
     
 }
-/* .bg-strips{
-    position: absolute;
-    top:25rem;
-    right: 5rem;
-    z-index: -1;
-    width: 15rem; */
-   /* height: 10rem; }*/
 
-@media screen and(max-width:850px){
+@media screen and (max-width: 850px) {
+    .front { 
+        flex-direction: column; 
+        align-items: center; /* Center items vertically */
+    }
 
-    .front{ 
-        flex-direction: column; } 
+    .right {
+        /* Adjusted styles for smaller screens */
+        top: auto; /* Reset top position */
+        bottom: 0;
+        height: auto;
+        clip-path: none;
+    }
+
+    .right-triangle,
+    .right-triangle1,
+    .right-triangle2 {
+        /* Adjusted styles for smaller screens */
+        max-width: 10%; /* Make triangles responsive */
+    }
+    .pic {
+        /* Adjusted styles for smaller screens */
+        position: static; /* Reset position */
+        margin-top: 2rem; /* Adjusted margin */
+        padding-top: 0; /* Reset padding */
+        width: 100%; /* Make image responsive */
+        max-width: 100%;
+        height: auto;
+    }
+    /* Display the button on smaller screens */
+    .button {
+        display: block;
+        justify-content: center; /* Center button horizontally */
+        margin-top: 2rem; /* Adjusted margin */
+        height: 3rem;
     
-        .right {
-            /* Adjust styles for smaller screens */
-            top: 35rem;
-            height: auto;
-            clip-path: none;
-        }
-    
-        .right-triangle {
-            /* Adjust styles for smaller screens */
-           
-            max-width: 205px;
-        }
-    
-        .right-triangle1 {
-            /* Adjust styles for smaller screens */
-           
-            max-width: 305px;
-        }
-    
-        .right-triangle2 {
-            /* Adjust styles for smaller screens */
-            
-            max-width: 505px;
-        }
-    
-        .pic {
-            /* Adjust styles for smaller screens */
-            top: 15rem;
-            width: 100%;
-            max-width: 30rem;
-            height: auto;
-            padding-top: 22rem;
-            margin-top: 42rem;
-        }
     }
     
-    .left {
-        padding: 2rem;
-        padding-top: 0%;
-        flex: 3;
-        display: flex;
-        gap: 0.5rem;
-        flex-direction: column;
-        left: 0;
-        right: 0;
-    }
+
+    
+}

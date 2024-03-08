@@ -37,14 +37,14 @@ transform: translate(-10px);
   
 }
 #bottom h3{
-  margin-left: -10rem;
+  margin-left: -2rem;
   margin-top: 0rem;
 }
 
 
 #bottom
 {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     text-align: start;
     justify-content: space-between;
@@ -70,7 +70,7 @@ transform: translate(-10px);
     }
 
 #bottom div p{
-    padding-bottom: 1rem; 
+    padding-bottom: 3rem; 
     font-size: 0.75rem;
 }
 
@@ -128,17 +128,37 @@ transform: translate(-10px);
 
 
 
-/* this makes the footer responsive means adjusted according to the screen of user */
-@media screen and (max-width: 850px)
-{
-    #footer{
-        padding: 1rem 1rem;
+/* Media Query for screens with a maximum width of 850px */
+@media screen and (max-width: 850px) {
+  #footer {
+      padding: 2rem;
+  }
+  #footer i {
+      margin: 0.5rem;
+  }
+  #top h1,
+  span {
+      margin-left: 0.5rem;
+  }
+  #bottom {
+      flex-direction: column;
+      align-items: center;
+  }
+  #bottom div {
+      width: 100%;
+  }
+}
 
-    }
-    #footer i{
- margin: 1rem 1rem 0 0;
-    }
-    #bottom div{
-        width: 50%;
-    }
+/* Additional Styles for Larger Screens */
+@media screen and (min-width: 851px) {
+  #footer {
+      padding: 1rem 1rem;
+  }
+  #top i {
+      margin: 0.5rem;
+  }
+  #top h1,
+  span {
+      margin-left: 1rem;
+  }
 }

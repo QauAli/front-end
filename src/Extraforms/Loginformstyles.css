@@ -43,15 +43,6 @@
    margin: 5px;
    margin-left: 5rem;
    margin-top: -2rem;
-
-  
-   
-   /* background-image: url("../images/img5.jpg"); */
-   /* background-position: relative;
-background-repeat: no-repeat;
-background-size: cover; */
-/* background-position-x: center;
-background-position-y: center; */
 background-position: -1rem;
 
 
@@ -64,11 +55,6 @@ background-position: -1rem;
     border-radius: 12px;
     overflow: hidden;
    box-shadow: 0 15px 20px black;
-
-    /* backdrop-filter: blur(20px); */
-    /* background-color: var(--signupCard); */
-    /* margin-left: 30rem; */
-   
 
 
 }
@@ -163,13 +149,23 @@ span .psw{
 
 
 
- @media screen and(max-width:850px)
-{
-    span.psw{
-        display: block;
-        float: none;
+/* Media Query for screens smaller than 850px */
+@media screen and (max-width: 850px) {
+    /* Adjustments for smaller screens */
+    .wrap {
+        margin-left: 0; /* Remove left margin */
     }
-    .canclebtn{
-        width: 100%;
+
+    .form1 {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    #canclebtn {
+        margin-right: 0; /* Remove right margin */
+    }
+
+    span .psw {
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center align the password link */
     }
 }

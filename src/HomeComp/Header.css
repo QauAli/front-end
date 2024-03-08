@@ -1,15 +1,30 @@
-.header{
-display: flex;
-justify-content: space-between;
-height:20px;
-
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    height: 20px;
+    position: relative; /* Added relative positioning */
 }
 
-
-.Logo{
-    width: 7rem ;
+.Logo {
+    width: 7rem;
     height: 7rem;
-    position:absolute;
-    left:0; /*this proprty will fix the logo to the left corner */
-    top:0;  
+    position: absolute;
+    left: 0; /* Fixed the logo to the left corner */
+    top: 0;
+}
+
+/* Adjusted styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow header to adjust its height based on content */
+    }
+
+    .Logo {
+        position: static; /* Reset position */
+        margin-bottom: 1rem; /* Add some space below the logo */
+        width: 100%; /* Make the logo fill the width */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
 }

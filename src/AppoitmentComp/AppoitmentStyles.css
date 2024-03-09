@@ -32,12 +32,6 @@
   border: solid black;
 }
 
-.content {
-  display: flex;
-  flex-direction: column; /* Change to column for a single vertical column */
-  padding: 10px 0;
-}
-
 .form2 {
   margin: 5px;
   padding: 10px;
@@ -50,12 +44,18 @@
   margin-left: 1rem;
 }
 
-
 .form2 textarea {
   border-radius: .3rem;
   border: 1px solid black;
   width: 100%; /* Full width */
   margin-top: 1rem;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
 }
 
 .content input {
@@ -64,8 +64,12 @@
   margin-bottom: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
-  width: 100%; /* Full width */
+  width: 100%;
 }
+
+
+
+
 
 .contact {
   margin-top: 1rem; /* Adjusted margin for better spacing */
@@ -87,6 +91,11 @@
 }
 .red-color{
   color: red;
+}
+
+
+.red-color{
+  color: rgb(255, 0, 0);
 }
 
 /* Animation */

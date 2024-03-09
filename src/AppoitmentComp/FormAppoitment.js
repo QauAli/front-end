@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AppoitmentStyles.css";
-import Validation from "../DynamicComponents/Validation";
+import AppointmentsFormValidations from "../DynamicComponents/AppointmentsFormValidations";
 
 function FormAppoitment({}) {
   const initialFormState = {
@@ -45,10 +45,10 @@ function FormAppoitment({}) {
       const data = await response.json();
 
       if (!response.ok) {
+        alert("Please Enter Data Correctly.");
         console.log("Appointment Not Registered");
-
       } else {
-        alert("Thank you for booking appointment ")
+        alert("Thankyou for booking appointment");
         console.log("Appointment Registered Successfully");
         console.log(JSON.stringify(data));
         // Dispatch a custom event when the appointment is registered
@@ -68,18 +68,20 @@ function FormAppoitment({}) {
   }
 
   /*=============================submitbutton handling==============================================*/
-async  function handlesubmit(e) {
+  async function handlesubmit(e) {
     e.preventDefault();
 
-    // Perform form validation
-    const validationErrors = Validation(values);
+    console.log("handle submit called");
+
+    const validationErrors = AppointmentsFormValidations(values);
+    console.log("validationErrors");
+    console.log(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      // No validation errors, show confirmation box
-
-        handleMessage();
+      console.log("Book appointment:", values.name, "and email:", values.email);
+      handleMessage();
     } else {
-      // Validation errors exist, update the errors state
+      console.log("Fill form correctly");
       setErrors(validationErrors);
     }
   }

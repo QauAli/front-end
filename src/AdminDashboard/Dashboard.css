@@ -29,11 +29,11 @@
   }
 
   /* ===========Home stylings=============== */
-  .main-container {
-    grid-area: main;
+  .main-container-div {
+    /* grid-area: main; */
     overflow-y: auto;
     color: rgba(255, 255, 255, 0.95);
-    margin-top: -0.75rem;
+    margin-top: 0.75rem;
     margin-left: 2rem;
     height: 20.9rem;
   }
@@ -58,34 +58,40 @@
     padding: 8px 15px;
     border-radius: 5px;
     width: 15rem;
-
-  }
+}
   
   .card:first-child {
     background-color:  #4a4a40;
+    color: white;
   }
   
   .card:nth-child(2) {
     background-color: navy;
+    color: white;
   }
   
   .card:nth-child(3) {
     background-color: #a7c8a7;
+    color: white;
   }
   
   .card:nth-child(4) {
     background-color:  #8b0000;
+    color: white;
   }
   
   .card-inner {
     display: flex;
     align-items: center;
-    margin-left: -13rem;
+    margin-left: -23rem;
     justify-content: space-between;
   }
   
   .card-inner > .card_icon {
     font-size: 25px;
+  }
+  .card-inner h3{
+    color: white;
   }
   
   .charts {

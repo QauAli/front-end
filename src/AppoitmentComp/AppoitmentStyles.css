@@ -18,14 +18,14 @@
   justify-content: center;
   align-items: center;
   width: 65rem;
-  height: 110vh;
+  height: 150vh;
   margin-bottom: 4rem;
   margin-top: 1rem;
   margin-left: 15rem;
 }
 
 #body {
-  max-width: 880px;
+  max-width: 980px;
   padding: 28px;
   margin: 0 28px;
   box-shadow: 0 15px 20px black;
@@ -34,8 +34,7 @@
 
 .content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column; /* Change to column for a single vertical column */
   padding: 10px 0;
 }
 
@@ -85,6 +84,9 @@
   cursor: pointer;
   background-color: navy;
   color: white;
+}
+.red-color{
+  color: red;
 }
 
 /* Animation */

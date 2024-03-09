@@ -15,10 +15,6 @@ function Validation(values)
       errors.password='Password is required';
       isValid = false;
     }
-    
-    // else if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/.test(values.password)){
-    //   errors.password="invalid password"
-    // }
 
     else if(values.password.length<6) {
       errors.password="password is too short";
@@ -26,16 +22,8 @@ function Validation(values)
 
     if (isValid) {
       // Handle form submission logic here (e.g., API request)
-      alert('Sig-up successfully');
+      alert('Account created  successfully now login with your credentials');
     }
-
-
-    // Additional checks for registration
-  if (!values.confirmPassword || values.confirmPassword.trim() === '') {
-    errors.confirmPassword = 'Confirm Password is required';
-  } else if (values.password !== values.confirmPassword) {
-    errors.confirmPassword = 'Passwords do not match';
-  }
 
   
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsPeopleFill } from "react-icons/bs";
-import "./Dashboard.css";
+// import "./Dashboard.css";
 import Numbercounter from "number-counter";
 function Home() {
   const [totalCustomers, setTotalCustomers] = useState(null);
@@ -38,8 +38,9 @@ function Home() {
   
 
   return (
-    <main className="main-container">
-      <div className="main-title">
+    // <main >
+    <div className="main-container-div">
+      <div>
         <h3 id="dashboard">DASHBOARD</h3>
       </div>
 
@@ -112,7 +113,7 @@ function Home() {
           </h1>
         </div>
       </div>
-    </main>
+      </div>
   );
 }
 export default Home;

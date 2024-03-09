@@ -24,7 +24,6 @@ function Contact() {
       <h2>Let's Get in Touch</h2>
     
       {/*================== closing of the Cleft div tag=========== */}
-     <img src={C3} alt="" id='contact1'/> 
       <Contactform/>
     </div>
 

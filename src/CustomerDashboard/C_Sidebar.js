@@ -45,6 +45,12 @@ function C_Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsListCheck className="icon" /> View Services
           </Link>
         </li>
+        {/* <li
+          className="sidebar-list-item"
+          onClick={() => showComponent("Bills")}
+        >
+          <BsGrid1X2Fill className="icon" /> My Bills
+        </li> */}
         <li
           className="sidebar-list-item"
           onClick={() => setshowFeedbackform(true)}

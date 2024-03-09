@@ -13,15 +13,6 @@ function UpdateProfile() {
     if (arrays.isLoggedin) {
       setvalues({ ...values, email: arrays.email, password: arrays.password });
     }
-
-    // console.log(
-    //   "Email=" +
-    //     arrays.email +
-    //     "password=" +
-    //     arrays.password +
-    //     "role=" +
-    //     arrays.role
-    // );
   });
 
   function handlechange(e) {

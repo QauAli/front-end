@@ -1,4 +1,4 @@
-import "./Dashboard.css";
+// import "./Dashboard.css";
 import Home from "./Home";
 import BarChart from "./BarChart";
 import Piechart from "./Piechart";
@@ -9,7 +9,7 @@ function Dashboard() {
     <div className="Dashboard-grid-container">
       <Home/>
       <BarChart />
-      <Piechart />
+      {/* <Piechart /> */}
     </div>
   );
 }

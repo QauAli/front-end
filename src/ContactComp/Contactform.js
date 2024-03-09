@@ -24,6 +24,15 @@ const handleEmail=(event)=>
 
     async function handlesubmit(e) {
  e.preventDefault();  //when page refresh details enter are not lost
+ if (!fname || !Lname || !Email || !Msg) {
+  alert('Please fill in all fields before submitting.');
+  return;
+}
+const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailFormat.test(Email)) {
+    alert('Invalid email format. Please enter a valid email address.');
+    return;
+  }
  await handlecontactform();
  setSubmitted(true);
  alert('Your form is submitted!');
@@ -90,7 +99,7 @@ return (
 
             <textarea
               placeholder='Message'
-              rows="6"
+              rows="8"
               value={Msg}
               onChange={handleMsg}
             ></textarea>
